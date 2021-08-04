@@ -1,4 +1,8 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import "../styles/globals.css";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import Head from "next/head";
+import Header from "../components/Header";
+import { light } from "../styles/theme";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -6,21 +10,21 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-`
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-}
+`;
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={light}>
+        <Head>
+          <title>Thales Ludwig</title>
+          <meta name="description" content="Thales' Portfolio" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Header />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
