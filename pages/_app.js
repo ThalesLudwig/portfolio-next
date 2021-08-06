@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Chat from "../components/Chat";
 import { light } from "../styles/theme";
 
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps }) {
           <Main>
             <Header />
             <Component {...pageProps} />
+            <Footer />
           </Main>
           <Chat />
         </Content>

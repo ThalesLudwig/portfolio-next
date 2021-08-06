@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   @media (max-width: ${MOBILE}) {
     width: 100vw;
+    padding: 20px;
   }
 `;
 
@@ -87,7 +88,7 @@ export const FlagImage = styled.img`
   cursor: pointer;
   border: 3px solid
     ${({ theme, isActive }) =>
-      isActive ? theme.colors.primaryAlt : theme.colors.background};
+      isActive ? theme.colors.title : theme.colors.background};
   margin-left: 5px;
 `;
 
@@ -103,4 +104,8 @@ export const FlagWrapper = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+
+  @media (max-width: ${MOBILE}) {
+    display: none;
+  }
 `;
