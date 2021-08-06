@@ -1,20 +1,19 @@
 import { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/router";
-import Message from "../Message/Message";
-import MessageService from "../../services/messageService";
-import messageParser from "../../helpers/messageParser";
-import loadingMessage from "../../helpers/loadingMessage";
+import Message from "../components/Message/Message";
+import MessageService from "../services/messageService";
+import messageParser from "../helpers/messageParser";
+import loadingMessage from "../helpers/loadingMessage";
 import {
   Container,
   Input,
   NativeInput,
   ScrollPanel,
   SendButton,
-} from "./ChatStyled";
+} from "../styles/pages/ChatPage";
 
 export default function Header() {
   const scrollPanelRef = useRef(null);
-  const router = useRouter();
+
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -78,10 +77,7 @@ export default function Header() {
   };
 
   return (
-    <Container
-      isChatPage={router.asPath === "/chat"}
-      onSubmit={(e) => submitForm(e)}
-    >
+    <Container onSubmit={(e) => submitForm(e)}>
       <ScrollPanel ref={scrollPanelRef}>
         {printMessages(messages)}
         {isLoading && <Message {...loadingMessage} />}

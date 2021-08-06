@@ -72,7 +72,7 @@ export const MediaCard = styled.div`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.secondary};
-  width: 185px;
+  width: 170px;
   height: 115px;
   border-radius: 20px;
   padding: 10px;

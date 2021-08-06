@@ -22,7 +22,7 @@ export default function Header() {
   };
 
   return (
-    <Container>
+    <Container isChat={router.asPath === "/chat"}>
       <FlagProfileWrapper>
         <ProfileWrapper>
           <ProfileImage width={60} height={60} src="profile_crop.jpg" />

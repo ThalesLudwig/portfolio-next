@@ -2,25 +2,17 @@ import styled from "styled-components";
 import { TABLET } from "../../constants/screen";
 
 export const Container = styled.form`
-  display: ${({ isChatPage }) => (isChatPage ? "none" : "flex")};
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 80px);
-  border-left: 1px solid ${({ theme }) => theme.colors.divisor};
-  margin-left: 30px;
-  width: 500px;
-  padding: 0px 30px;
-
-  @media (max-width: ${TABLET}) {
-    display: none;
-  }
+  height: calc(100vh - 125px);
+  width: 100vw;
 `;
 
 export const Input = styled.div`
   padding: 20px 25px;
   background-color: ${({ theme }) => theme.colors.card};
   border: none;
-  border-radius: 12px;
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -50,6 +42,7 @@ export const ScrollPanel = styled.div`
   scrollbar-width: none;
   height: 100vh;
   overflow-y: auto;
+  padding: 0px 15px;
 
   &::-webkit-scrollbar {
     display: none;

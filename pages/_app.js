@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle``;
 const Content = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
 `;
 
 const Main = styled.div`

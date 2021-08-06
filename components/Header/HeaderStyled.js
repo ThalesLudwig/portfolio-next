@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { MOBILE } from "../../constants/screen";
 
 export const Container = styled.div`
-  display: flex;
+  display: ${({ isChat }) => (isChat ? "none" : "flex")};
   flex-direction: column;
 
   @media (max-width: ${MOBILE}) {
