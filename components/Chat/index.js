@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Message from "../Message/Message";
 import MessageService from "../../services/messageService";
 import messageParser from "../../helpers/messageParser";
@@ -12,6 +12,8 @@ import {
 } from "./ChatStyled";
 
 export default function Header() {
+  const scrollPanelRef = useRef(null);
+
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +25,15 @@ export default function Header() {
       setMessages(messageParser(greetingMessages));
       setIsLoading(false);
     }, 500);
+  }, []);
+
+  useEffect(() => {
+    if (scrollPanelRef) {
+      scrollPanelRef.current.addEventListener("DOMNodeInserted", (event) => {
+        const { currentTarget: target } = event;
+        target.scroll({ top: target.scrollHeight, behavior: "smooth" });
+      });
+    }
   }, []);
 
   const submitForm = (event) => {
@@ -67,7 +78,7 @@ export default function Header() {
 
   return (
     <Container onSubmit={(e) => submitForm(e)}>
-      <ScrollPanel>
+      <ScrollPanel ref={scrollPanelRef}>
         {printMessages(messages)}
         {isLoading && <Message {...loadingMessage} />}
       </ScrollPanel>

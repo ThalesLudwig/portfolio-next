@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 5px;
+  margin: 2px 0px;
   display: flex;
   align-items: center;
   flex-direction: ${({ isPrimary }) => (isPrimary ? "row" : "row-reverse")};
@@ -23,7 +23,7 @@ export const TextArea = styled.div`
   background: ${({ isPrimary, theme }) =>
     isPrimary ? theme.colors.primary : theme.colors.messages};
   font-weight: 400;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.sizes.text};
   color: ${({ theme, isPrimary }) =>
     isPrimary ? theme.colors.background : theme.colors.title};
   border-radius: 20px;
@@ -72,8 +72,8 @@ export const MediaCard = styled.div`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.secondary};
-  width: 160px;
-  height: 100px;
+  width: 185px;
+  height: 115px;
   border-radius: 20px;
   padding: 10px;
   margin: 0px 5px 5px 0px;
@@ -87,14 +87,15 @@ export const MediaCard = styled.div`
 export const MediaTitle = styled.div`
   font-weight: normal;
   color: ${({ theme }) => theme.colors.title};
+  font-size: ${({ theme }) => theme.sizes.textSmall};
   display: flex;
   align-items: center;
 `;
 
 export const MediaText = styled.div`
   font-weight: normal;
-  font-size: 14px;
-  color: ${({ theme }) => theme.colors.text};
+  font-size: ${({ theme }) => theme.sizes.textSmall};
+  color: ${({ theme }) => theme.colors.title};
 `;
 
 export const MediaTitleTextWrapper = styled.div`

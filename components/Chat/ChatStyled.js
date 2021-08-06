@@ -23,6 +23,7 @@ export const Input = styled.div`
   border-radius: 12px;
   display: flex;
   flex-direction: row;
+  margin-top: 10px;
 `;
 
 export const NativeInput = styled.input`
