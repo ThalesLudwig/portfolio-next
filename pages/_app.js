@@ -1,43 +1,37 @@
 import "../styles/globals.css";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Chat from "../components/Chat";
-import { light } from "../styles/theme";
+import { Content, GlobalStyle, Main } from "../styles/pages/AppPage";
+import ConnectedTheme from "../components/ConnectedTheme";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "../config/store";
+import { Provider } from "react-redux";
 
-const GlobalStyle = createGlobalStyle``;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
-
-const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={light}>
-        <Head>
-          <title>Thales Ludwig</title>
-          <meta name="description" content="Thales' Portfolio" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Content>
-          <Main>
-            <Header />
-            <Component {...pageProps} />
-            <Footer />
-          </Main>
-          <Chat />
-        </Content>
-      </ThemeProvider>
-    </>
+    <Provider store={store}>
+      <PersistGate loading="Loading" persistor={persistor}>
+        <GlobalStyle />
+        <ConnectedTheme>
+          <Head>
+            <title>Thales Ludwig</title>
+            <meta name="description" content="Thales' Portfolio" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Content>
+            <Main>
+              <Header />
+              <Component {...pageProps} />
+              <Footer />
+            </Main>
+            <Chat />
+          </Content>
+        </ConnectedTheme>
+      </PersistGate>
+    </Provider>
   );
 }
+
+export default App;
