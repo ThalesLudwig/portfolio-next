@@ -13,8 +13,10 @@ export const light = {
     secondaryAlt: "#c2ad5b",
     card: "#F9FAFF",
     background: "#FFFFFF",
-    title: "#ECECEC",
+    title: "#222126",
     text: "#8B8DB1",
+    divisor: "#ECECEC",
+    messages: "#ECECEC",
   },
   sizes,
 };
@@ -29,6 +31,8 @@ export const dark = {
     background: "#161318",
     title: "#ECECEC",
     text: "#8B8DB1",
+    divisor: "#8B8DB1",
+    messages: "#222126",
   },
   sizes,
 };

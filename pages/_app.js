@@ -1,15 +1,20 @@
 import "../styles/globals.css";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
 import Header from "../components/Header";
+import Chat from "../components/Chat";
 import { light } from "../styles/theme";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+const GlobalStyle = createGlobalStyle``;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export default function App({ Component, pageProps }) {
@@ -22,8 +27,13 @@ export default function App({ Component, pageProps }) {
           <meta name="description" content="Thales' Portfolio" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
-        <Component {...pageProps} />
+        <Content>
+          <Main>
+            <Header />
+            <Component {...pageProps} />
+          </Main>
+          <Chat />
+        </Content>
       </ThemeProvider>
     </>
   );

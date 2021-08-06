@@ -1,11 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MEDIA from "../../constants/media";
-import twitter from "../../assets/twitter.png";
-import github from "../../assets/github.png";
-import linkedin from "../../assets/linkedin.png";
-import email from "../../assets/email.png";
-import playstore from "../../assets/playstore.jpeg";
 import {
   Container,
   Avatar,
@@ -23,15 +18,15 @@ import {
 const renderIcon = ({ media }) => {
   switch (media) {
     case MEDIA.GITHUB:
-      return github;
+      return "github.png";
     case MEDIA.TWITTER:
-      return twitter;
+      return "twitter.png";
     case MEDIA.LINKEDIN:
-      return linkedin;
+      return "linkedin.png";
     case MEDIA.PLAYSTORE:
-      return playstore;
+      return "playstore.jpeg";
     default:
-      return email;
+      return "email.png";
   }
 };
 
@@ -47,7 +42,7 @@ const renderMedia = (mediaList) => {
           </MediaTitleTextWrapper>
           <MediaText>{m.description}</MediaText>
         </MediaCard>
-      </MediaLink>
+      </MediaLink>,
     );
   });
   return medias;
@@ -81,7 +76,7 @@ const Message = ({ isPrimary, text, hasAvatar, image, media }) => {
 
 Message.propTypes = {
   isPrimary: PropTypes.bool,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   hasAvatar: PropTypes.bool,
   media: PropTypes.array,
   image: PropTypes.object,
