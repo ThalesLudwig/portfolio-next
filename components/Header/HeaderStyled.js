@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   @media (max-width: ${MOBILE}) {
     width: 100vw;
-    padding: 20px;
+    padding: 0px 20px;
   }
 `;
 
@@ -38,10 +38,10 @@ export const Tab = styled.div`
   min-width: max-content;
   cursor: pointer;
   color: ${({ theme, isActive }) =>
-    isActive ? theme.colors.primary : theme.colors.text};
+    isActive ? theme.colors.activeTab : theme.colors.text};
   font-size: ${({ theme }) => theme.sizes.subtitle};
   border-bottom: ${({ theme, isActive }) =>
-    `2px ${isActive ? theme.colors.primary : theme.colors.background} solid`};
+    `2px ${isActive ? theme.colors.activeTab : theme.colors.background} solid`};
 
   &:hover {
     color: ${({ theme, isActive }) =>
@@ -108,4 +108,13 @@ export const FlagWrapper = styled.div`
   @media (max-width: ${MOBILE}) {
     display: none;
   }
+`;
+
+export const ThemeSwitcher = styled.img.attrs({
+  src: "icons/theme-switch.png",
+  width: 35,
+  height: 35,
+})`
+  cursor: pointer;
+  margin: 0px 10px 0px 5px;
 `;

@@ -25,7 +25,7 @@ export const TextArea = styled.div`
   font-weight: 400;
   font-size: ${({ theme }) => theme.sizes.text};
   color: ${({ theme, isPrimary }) =>
-    isPrimary ? theme.colors.background : theme.colors.title};
+    isPrimary ? theme.colors.messages : theme.colors.text};
   border-radius: 20px;
   padding: 10px 14px;
   display: flex;

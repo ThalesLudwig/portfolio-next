@@ -1,4 +1,7 @@
+import { connect } from "react-redux";
 import { useRouter } from "next/router";
+import { setDarkTheme, setLightTheme } from "../../config/themeSlice";
+import { setEnglish, setPortuguese } from "../../config/locationSlice";
 import Link from "next/link";
 import {
   Container,
@@ -7,9 +10,17 @@ import {
   FlagImage,
   FlagWrapper,
   AvatarLabelWrapper,
+  ThemeSwitcher,
 } from "./FooterStyled";
 
-export default function Footer() {
+function Footer({
+  theme,
+  location,
+  setDarkTheme,
+  setLightTheme,
+  setEnglish,
+  setPortuguese,
+}) {
   const router = useRouter();
   const isChat = router.asPath === "/chat";
 
@@ -24,9 +35,40 @@ export default function Footer() {
         </Link>
       </AvatarLabelWrapper>
       <FlagWrapper>
-        <FlagImage width={50} height={35} src="usa_flag.png" isActive />
-        <FlagImage width={50} height={35} src="brazil_flag.png" />
+        <ThemeSwitcher
+          onClick={() => (!!theme ? setDarkTheme() : setLightTheme())}
+        />
+        <FlagImage
+          width={50}
+          height={35}
+          src="usa_flag.png"
+          isActive={location === "en-US"}
+          onClick={() => setEnglish()}
+        />
+        <FlagImage
+          width={50}
+          height={35}
+          src="brazil_flag.png"
+          isActive={location === "pt-BR"}
+          onClick={() => setPortuguese()}
+        />
       </FlagWrapper>
     </Container>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    theme: state.theme.value,
+    location: state.location.value,
+  };
+};
+
+const mapDispatchToProps = {
+  setDarkTheme,
+  setLightTheme,
+  setEnglish,
+  setPortuguese,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

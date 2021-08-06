@@ -17,14 +17,15 @@ export const light = {
     text: "#8B8DB1",
     divisor: "#ECECEC",
     messages: "#ECECEC",
+    activeTab: "#8257E6",
   },
   sizes,
 };
 
 export const dark = {
   colors: {
-    primary: "#8257E6",
-    primaryAlt: "#4E348C",
+    primary: "#4E348C",
+    primaryAlt: "#8257E6",
     secondary: "#c2ad5b",
     secondaryAlt: "#EBD26D",
     card: "#222126",
@@ -32,7 +33,8 @@ export const dark = {
     title: "#ECECEC",
     text: "#8B8DB1",
     divisor: "#8B8DB1",
-    messages: "#222126",
+    messages: "#ECECEC",
+    activeTab: "#8257E6",
   },
   sizes,
 };

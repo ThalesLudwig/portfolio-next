@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Chat from "../components/Chat";
-import { Content, GlobalStyle, Main } from "../styles/pages/AppPage";
+import { Content, Main } from "../styles/pages/AppPage";
 import ConnectedTheme from "../components/ConnectedTheme";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "../config/store";
@@ -13,7 +13,6 @@ function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <PersistGate loading="Loading" persistor={persistor}>
-        <GlobalStyle />
         <ConnectedTheme>
           <Head>
             <title>Thales Ludwig</title>

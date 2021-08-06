@@ -54,6 +54,15 @@ export const FlagImage = styled.img`
   margin-left: 5px;
 `;
 
+export const ThemeSwitcher = styled.img.attrs({
+  src: "icons/theme-switch.png",
+  width: 35,
+  height: 35,
+})`
+  cursor: pointer;
+  margin: 0px 10px 0px 5px;
+`;
+
 export const FlagWrapper = styled.div`
   display: flex;
   flex-direction: row;

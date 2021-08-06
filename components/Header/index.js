@@ -1,4 +1,7 @@
+import { connect } from "react-redux";
 import { useRouter } from "next/router";
+import { setDarkTheme, setLightTheme } from "../../config/themeSlice";
+import { setEnglish, setPortuguese } from "../../config/locationSlice";
 import Link from "next/link";
 import {
   Container,
@@ -12,9 +15,17 @@ import {
   FlagImage,
   FlagWrapper,
   FlagProfileWrapper,
+  ThemeSwitcher,
 } from "./HeaderStyled";
 
-export default function Header() {
+function Header({
+  theme,
+  location,
+  setDarkTheme,
+  setLightTheme,
+  setEnglish,
+  setPortuguese,
+}) {
   const router = useRouter();
 
   const isActiveRoute = (route) => {
@@ -32,8 +43,23 @@ export default function Header() {
           </NameTitleWrapper>
         </ProfileWrapper>
         <FlagWrapper>
-          <FlagImage width={50} height={35} src="usa_flag.png" isActive />
-          <FlagImage width={50} height={35} src="brazil_flag.png" />
+          <ThemeSwitcher
+            onClick={() => (!!theme ? setDarkTheme() : setLightTheme())}
+          />
+          <FlagImage
+            width={50}
+            height={35}
+            src="usa_flag.png"
+            isActive={location === "en-US"}
+            onClick={() => setEnglish()}
+          />
+          <FlagImage
+            width={50}
+            height={35}
+            src="brazil_flag.png"
+            isActive={location === "pt-BR"}
+            onClick={() => setPortuguese()}
+          />
         </FlagWrapper>
       </FlagProfileWrapper>
       <NavigationWrapper>
@@ -65,3 +91,19 @@ export default function Header() {
     </Container>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    theme: state.theme.value,
+    location: state.location.value,
+  };
+};
+
+const mapDispatchToProps = {
+  setDarkTheme,
+  setLightTheme,
+  setEnglish,
+  setPortuguese,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
