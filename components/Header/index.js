@@ -2,7 +2,10 @@ import { connect } from "react-redux";
 import { useRouter } from "next/router";
 import { setDarkTheme, setLightTheme } from "../../config/themeSlice";
 import { setEnglish, setPortuguese } from "../../config/locationSlice";
+import LANG_CONSTANTS from "../../constants/lang";
 import Link from "next/link";
+import localization from "./localization";
+import { useIntl } from "react-intl";
 import {
   Container,
   Tab,
@@ -27,6 +30,7 @@ function Header({
   setPortuguese,
 }) {
   const router = useRouter();
+  const { formatMessage } = useIntl();
 
   const isActiveRoute = (route) => {
     return router.asPath === route;
@@ -39,7 +43,7 @@ function Header({
           <ProfileImage width={60} height={60} src="profile_crop.jpg" />
           <NameTitleWrapper>
             <Name>Thales Ludwig Valentini</Name>
-            <Title>Software Engineer</Title>
+            <Title>{formatMessage(localization.jobTitle)}</Title>
           </NameTitleWrapper>
         </ProfileWrapper>
         <FlagWrapper>
@@ -50,42 +54,58 @@ function Header({
             width={50}
             height={35}
             src="usa_flag.png"
-            isActive={location === "en-US"}
+            isActive={location === LANG_CONSTANTS.EN}
             onClick={() => setEnglish()}
           />
           <FlagImage
             width={50}
             height={35}
             src="brazil_flag.png"
-            isActive={location === "pt-BR"}
+            isActive={location === LANG_CONSTANTS.BR}
             onClick={() => setPortuguese()}
           />
         </FlagWrapper>
       </FlagProfileWrapper>
       <NavigationWrapper>
         <Link href="/">
-          <Tab isActive={isActiveRoute("/")}>About me</Tab>
+          <Tab isActive={isActiveRoute("/")}>
+            {formatMessage(localization.aboutMe)}
+          </Tab>
         </Link>
         <Link href="/skills">
-          <Tab isActive={isActiveRoute("/skills")}>Skills</Tab>
+          <Tab isActive={isActiveRoute("/skills")}>
+            {formatMessage(localization.skills)}
+          </Tab>
         </Link>
         <Link href="/projects">
-          <Tab isActive={isActiveRoute("/projects")}>Projects</Tab>
+          <Tab isActive={isActiveRoute("/projects")}>
+            {formatMessage(localization.projects)}
+          </Tab>
         </Link>
         <Link href="/career">
-          <Tab isActive={isActiveRoute("/career")}>Career</Tab>
+          <Tab isActive={isActiveRoute("/career")}>
+            {formatMessage(localization.career)}
+          </Tab>
         </Link>
         <Link href="/education">
-          <Tab isActive={isActiveRoute("/education")}>Education</Tab>
+          <Tab isActive={isActiveRoute("/education")}>
+            {formatMessage(localization.education)}
+          </Tab>
         </Link>
         <Link href="/articles">
-          <Tab isActive={isActiveRoute("/articles")}>Articles</Tab>
+          <Tab isActive={isActiveRoute("/articles")}>
+            {formatMessage(localization.articles)}
+          </Tab>
         </Link>
         <Link href="/contact">
-          <Tab isActive={isActiveRoute("/contact")}>Contact</Tab>
+          <Tab isActive={isActiveRoute("/contact")}>
+            {formatMessage(localization.contact)}
+          </Tab>
         </Link>
         <Link href="/designs">
-          <Tab isActive={isActiveRoute("/designs")}>Designs</Tab>
+          <Tab isActive={isActiveRoute("/designs")}>
+            {formatMessage(localization.designs)}
+          </Tab>
         </Link>
       </NavigationWrapper>
     </Container>

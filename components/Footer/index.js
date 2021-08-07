@@ -2,7 +2,10 @@ import { connect } from "react-redux";
 import { useRouter } from "next/router";
 import { setDarkTheme, setLightTheme } from "../../config/themeSlice";
 import { setEnglish, setPortuguese } from "../../config/locationSlice";
+import LANG_CONSTANTS from "../../constants/lang";
 import Link from "next/link";
+import localization from "./localization";
+import { useIntl } from "react-intl";
 import {
   Container,
   Avatar,
@@ -21,16 +24,19 @@ function Footer({
   setEnglish,
   setPortuguese,
 }) {
+  const { formatMessage } = useIntl();
   const router = useRouter();
   const isChat = router.asPath === "/chat";
 
   return (
     <Container>
       <AvatarLabelWrapper>
-        <Avatar />
+        <Link href={isChat ? "/" : "/chat"}>
+          <Avatar />
+        </Link>
         <Link href={isChat ? "/" : "/chat"}>
           <Label isChat={isChat}>
-            {isChat ? "Go back" : "Talk to bot-me!"}
+            {formatMessage(isChat ? localization.back : localization.talkToMe)}
           </Label>
         </Link>
       </AvatarLabelWrapper>
@@ -42,14 +48,14 @@ function Footer({
           width={50}
           height={35}
           src="usa_flag.png"
-          isActive={location === "en-US"}
+          isActive={location === LANG_CONSTANTS.EN}
           onClick={() => setEnglish()}
         />
         <FlagImage
           width={50}
           height={35}
           src="brazil_flag.png"
-          isActive={location === "pt-BR"}
+          isActive={location === LANG_CONSTANTS.BR}
           onClick={() => setPortuguese()}
         />
       </FlagWrapper>

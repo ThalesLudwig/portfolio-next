@@ -26,7 +26,7 @@ export const TextArea = styled.div`
   font-size: ${({ theme }) => theme.sizes.text};
   color: ${({ theme, isPrimary }) =>
     isPrimary ? theme.colors.messages : theme.colors.text};
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px 14px;
   display: flex;
   align-items: center;
@@ -72,9 +72,9 @@ export const MediaCard = styled.div`
   display: flex;
   flex-direction: column;
   background: ${({ theme }) => theme.colors.secondary};
-  width: 170px;
-  height: 115px;
-  border-radius: 20px;
+  width: 140px;
+  height: 150px;
+  border-radius: 10px;
   padding: 10px;
   margin: 0px 5px 5px 0px;
   cursor: pointer;

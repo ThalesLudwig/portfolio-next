@@ -8,6 +8,7 @@ import ConnectedTheme from "../components/ConnectedTheme";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "../config/store";
 import { Provider } from "react-redux";
+import IntlProvider from "../components/IntlProvider";
 
 function App({ Component, pageProps }) {
   return (
@@ -19,14 +20,16 @@ function App({ Component, pageProps }) {
             <meta name="description" content="Thales' Portfolio" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <Content>
-            <Main>
-              <Header />
-              <Component {...pageProps} />
-              <Footer />
-            </Main>
-            <Chat />
-          </Content>
+          <IntlProvider>
+            <Content>
+              <Main>
+                <Header />
+                <Component {...pageProps} />
+                <Footer />
+              </Main>
+              <Chat />
+            </Content>
+          </IntlProvider>
         </ConnectedTheme>
       </PersistGate>
     </Provider>

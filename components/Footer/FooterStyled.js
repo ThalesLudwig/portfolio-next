@@ -36,7 +36,7 @@ export const AvatarLabelWrapper = styled.div`
 export const Label = styled.div`
   display: flex;
   color: ${({ theme }) => theme.colors.title};
-  font-size: ${({ theme }) => theme.sizes.text};
+  font-size: ${({ theme }) => theme.sizes.textSmall};
   margin: 0px 10px;
   cursor: pointer;
 
