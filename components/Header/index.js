@@ -1,56 +1,138 @@
+import { connect } from "react-redux";
 import { useRouter } from "next/router";
+import { setDarkTheme, setLightTheme } from "../../config/themeSlice";
+import { setEnglish, setPortuguese } from "../../config/locationSlice";
+import LANG_CONSTANTS from "../../constants/lang";
 import Link from "next/link";
-import { Container, Tab } from "./HeaderStyled";
+import localization from "./localization";
+import { useIntl } from "react-intl";
+import { clearMessages } from "../../config/messagesSlice";
+import {
+  Container,
+  Tab,
+  ProfileImage,
+  ProfileWrapper,
+  NameTitleWrapper,
+  Name,
+  Title,
+  NavigationWrapper,
+  FlagImage,
+  FlagWrapper,
+  FlagProfileWrapper,
+  ThemeSwitcher,
+} from "./HeaderStyled";
 
-export default function Header() {
+function Header({
+  theme,
+  location,
+  setDarkTheme,
+  setLightTheme,
+  setEnglish,
+  setPortuguese,
+  clearMessages,
+}) {
   const router = useRouter();
+  const { formatMessage } = useIntl();
 
   const isActiveRoute = (route) => {
     return router.asPath === route;
   };
 
   return (
-    <Container>
-      <Link href="/">
-        <Tab className="tab" isActive={isActiveRoute("/")}>
-          About me
-        </Tab>
-      </Link>
-      <Link href="/skills">
-        <Tab className="tab" isActive={isActiveRoute("/skills")}>
-          Skills
-        </Tab>
-      </Link>
-      <Link href="/projects">
-        <Tab className="tab" isActive={isActiveRoute("/projects")}>
-          Projects
-        </Tab>
-      </Link>
-      <Link href="/career">
-        <Tab className="tab" isActive={isActiveRoute("/career")}>
-          Career
-        </Tab>
-      </Link>
-      <Link href="/education">
-        <Tab className="tab" isActive={isActiveRoute("/education")}>
-          Education
-        </Tab>
-      </Link>
-      <Link href="/articles">
-        <Tab className="tab" isActive={isActiveRoute("/articles")}>
-          Articles
-        </Tab>
-      </Link>
-      <Link href="/contact">
-        <Tab className="tab" isActive={isActiveRoute("/contact")}>
-          Contact
-        </Tab>
-      </Link>
-      <Link href="/designs">
-        <Tab className="tab" isActive={isActiveRoute("/designs")}>
-          Designs
-        </Tab>
-      </Link>
+    <Container isChat={router.asPath === "/chat"}>
+      <FlagProfileWrapper>
+        <ProfileWrapper>
+          <ProfileImage width={60} height={60} src="profile_crop.jpg" />
+          <NameTitleWrapper>
+            <Name>Thales Ludwig Valentini</Name>
+            <Title>{formatMessage(localization.jobTitle)}</Title>
+          </NameTitleWrapper>
+        </ProfileWrapper>
+        <FlagWrapper>
+          <ThemeSwitcher
+            onClick={() => (!!theme ? setDarkTheme() : setLightTheme())}
+          />
+          <FlagImage
+            width={50}
+            height={35}
+            src="usa_flag.png"
+            isActive={location === LANG_CONSTANTS.EN}
+            onClick={() => {
+              clearMessages();
+              setEnglish();
+            }}
+          />
+          <FlagImage
+            width={50}
+            height={35}
+            src="brazil_flag.png"
+            isActive={location === LANG_CONSTANTS.BR}
+            onClick={() => {
+              clearMessages();
+              setPortuguese();
+            }}
+          />
+        </FlagWrapper>
+      </FlagProfileWrapper>
+      <NavigationWrapper>
+        <Link href="/">
+          <Tab isActive={isActiveRoute("/")}>
+            {formatMessage(localization.aboutMe)}
+          </Tab>
+        </Link>
+        <Link href="/skills">
+          <Tab isActive={isActiveRoute("/skills")}>
+            {formatMessage(localization.skills)}
+          </Tab>
+        </Link>
+        <Link href="/projects">
+          <Tab isActive={isActiveRoute("/projects")}>
+            {formatMessage(localization.projects)}
+          </Tab>
+        </Link>
+        <Link href="/career">
+          <Tab isActive={isActiveRoute("/career")}>
+            {formatMessage(localization.career)}
+          </Tab>
+        </Link>
+        <Link href="/education">
+          <Tab isActive={isActiveRoute("/education")}>
+            {formatMessage(localization.education)}
+          </Tab>
+        </Link>
+        <Link href="/articles">
+          <Tab isActive={isActiveRoute("/articles")}>
+            {formatMessage(localization.articles)}
+          </Tab>
+        </Link>
+        <Link href="/contact">
+          <Tab isActive={isActiveRoute("/contact")}>
+            {formatMessage(localization.contact)}
+          </Tab>
+        </Link>
+        <Link href="/designs">
+          <Tab isActive={isActiveRoute("/designs")}>
+            {formatMessage(localization.designs)}
+          </Tab>
+        </Link>
+      </NavigationWrapper>
     </Container>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    theme: state.theme.value,
+    location: state.location.value,
+  };
+};
+
+const mapDispatchToProps = {
+  setDarkTheme,
+  setLightTheme,
+  setEnglish,
+  setPortuguese,
+  clearMessages,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

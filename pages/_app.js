@@ -1,30 +1,39 @@
 import "../styles/globals.css";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
 import Header from "../components/Header";
-import { light } from "../styles/theme";
+import Footer from "../components/Footer";
+import Chat from "../components/Chat";
+import { Content, Main } from "../styles/pages/AppPage";
+import ConnectedTheme from "../components/ConnectedTheme";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "../config/store";
+import { Provider } from "react-redux";
+import IntlProvider from "../components/IntlProvider";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
-
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={light}>
-        <Head>
-          <title>Thales Ludwig</title>
-          <meta name="description" content="Thales' Portfolio" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Header />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
+    <Provider store={store}>
+      <PersistGate loading="Loading" persistor={persistor}>
+        <ConnectedTheme>
+          <Head>
+            <title>Thales Ludwig</title>
+            <meta name="description" content="Thales' Portfolio" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <IntlProvider>
+            <Content>
+              <Main>
+                <Header />
+                <Component {...pageProps} />
+                <Footer />
+              </Main>
+              <Chat />
+            </Content>
+          </IntlProvider>
+        </ConnectedTheme>
+      </PersistGate>
+    </Provider>
   );
 }
+
+export default App;

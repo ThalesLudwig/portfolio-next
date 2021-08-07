@@ -1,18 +1,16 @@
 import styled from "styled-components";
-import avatar from "../../assets/avatar.jpeg";
-import profile from "../../assets/profile_anim.jpg";
 
 export const Container = styled.div`
-  margin: 5px;
+  margin: 2px 0px;
   display: flex;
   align-items: center;
   flex-direction: ${({ isPrimary }) => (isPrimary ? "row" : "row-reverse")};
 `;
 
 export const Avatar = styled.div`
-  background: ${({ theme }) => theme.grey};
+  background: ${({ theme }) => theme.colors.messageBackground};
   background-image: ${({ isPrimary }) =>
-    isPrimary ? `url(${profile})` : `url(${avatar})`};
+    isPrimary ? `url('profile_anim.jpg')` : `url('avatar.jpeg')`};
   background-repeat: no-repeat;
   background-size: cover;
   width: 42px;
@@ -23,11 +21,14 @@ export const Avatar = styled.div`
 
 export const TextArea = styled.div`
   background: ${({ isPrimary, theme }) =>
-    isPrimary ? theme.primary : theme.grey};
+    isPrimary ? theme.colors.primary : theme.colors.messageBackground};
   font-weight: 400;
-  font-size: 14px;
-  color: ${({ theme, isPrimary }) => (isPrimary ? theme.white : theme.title)};
-  border-radius: 20px;
+  font-size: ${({ theme }) => theme.sizes.text};
+  color: ${({ theme, isPrimary }) =>
+    isPrimary
+      ? theme.colors.messageTextPrimary
+      : theme.colors.messageTextSecondary};
+  border-radius: 8px;
   padding: 10px 14px;
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@ export const TextArea = styled.div`
 
 export const Image = styled.div`
   background: ${({ isPrimary, theme }) =>
-    isPrimary ? theme.primary : theme.grey};
+    isPrimary ? theme.colors.primary : theme.colors.messageBackground};
   background: url(${({ src }) => src});
   background-size: cover;
   background-repeat: no-repeat;
@@ -55,10 +56,10 @@ export const Image = styled.div`
 
 export const MediaLink = styled.a`
   text-decoration: none;
-`
+`;
 
 export const MediaIcon = styled.div`
-  background: ${({ theme }) => theme.grey};
+  background: ${({ theme }) => theme.colors.messageBackground};
   background: url(${({ src }) => src});
   background-size: cover;
   background-repeat: no-repeat;
@@ -72,30 +73,31 @@ export const MediaIcon = styled.div`
 export const MediaCard = styled.div`
   display: flex;
   flex-direction: column;
-  background: ${({ theme }) => theme.secondary};
-  width: 160px;
-  height: 100px;
-  border-radius: 20px;
+  background: ${({ theme }) => theme.colors.secondary};
+  width: 140px;
+  height: 150px;
+  border-radius: 10px;
   padding: 10px;
   margin: 0px 5px 5px 0px;
   cursor: pointer;
 
   &:hover {
-    background: ${({ theme }) => theme.secondaryAlt};
+    background: ${({ theme }) => theme.colors.secondaryAlt};
   }
 `;
 
 export const MediaTitle = styled.div`
   font-weight: normal;
-  color: ${({ theme }) => theme.title};
+  color: ${({ theme }) => theme.colors.messageMediaText};
+  font-size: ${({ theme }) => theme.sizes.textSmall};
   display: flex;
   align-items: center;
 `;
 
 export const MediaText = styled.div`
   font-weight: normal;
-  font-size: 14px;
-  color: ${({ theme }) => theme.text};
+  font-size: ${({ theme }) => theme.sizes.textSmall};
+  color: ${({ theme }) => theme.colors.messageMediaText};
 `;
 
 export const MediaTitleTextWrapper = styled.div`
@@ -107,6 +109,6 @@ export const MediaTitleTextWrapper = styled.div`
 export const MediaWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: ${({ hasAvatar }) => !hasAvatar ? "52px" : "10px"};
+  margin-left: ${({ hasAvatar }) => (!hasAvatar ? "52px" : "10px")};
   flex-wrap: wrap;
 `;
