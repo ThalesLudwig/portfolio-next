@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const messagesSlice = createSlice({
   name: "messages",
-  initialState: { value: [] },
+  initialState: { value: [], isLoading: false },
   reducers: {
     addMessage(state, { payload }) {
       if (Array.isArray(payload)) {
@@ -14,9 +14,13 @@ const messagesSlice = createSlice({
     clearMessages(state) {
       state.value = [];
     },
+    setIsLoading(state, { payload }) {
+      state.isLoading = payload;
+    },
   },
 });
 
-export const { addMessage, clearMessages } = messagesSlice.actions;
+export const { addMessage, clearMessages, setIsLoading } =
+  messagesSlice.actions;
 
 export default messagesSlice.reducer;

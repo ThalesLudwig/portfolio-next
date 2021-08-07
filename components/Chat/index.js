@@ -6,7 +6,7 @@ import messageParser from "../../helpers/messageParser";
 import loadingMessage from "../../helpers/loadingMessage";
 import localization from "../../lang/pages/ChatPageLocalization";
 import { useIntl } from "react-intl";
-import { addMessage } from "../../config/messagesSlice";
+import { addMessage, setIsLoading } from "../../config/messagesSlice";
 import submitForm from "./submitForm";
 import {
   Container,
@@ -16,12 +16,11 @@ import {
   SendButton,
 } from "./ChatStyled";
 
-function Chat({ location, messages, addMessage }) {
+function Chat({ location, messages, addMessage, isLoading }) {
   const { formatMessage } = useIntl();
   const scrollPanelRef = useRef(null);
   const router = useRouter();
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (messages.length === 0) {
@@ -110,11 +109,13 @@ const mapStateToProps = (state) => {
   return {
     location: state.location.value,
     messages: state.messages.value,
+    isLoading: state.messages.isLoading,
   };
 };
 
 const mapDispatchToProps = {
   addMessage,
+  setIsLoading,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chat);

@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { addMessage } from "../config/messagesSlice";
+import { addMessage, setIsLoading } from "../config/messagesSlice";
 import messageParser from "../helpers/messageParser";
 import localization from "../lang/pages/ProjectsPageLocalization";
 import { useIntl } from "react-intl";
+import { MESSAGE_WAIT } from "../constants/time";
 
-function Projects({ addMessage, messages }) {
+function Projects({ addMessage, setIsLoading, messages }) {
   const { formatMessage } = useIntl();
 
   useEffect(() => {
@@ -16,7 +17,11 @@ function Projects({ addMessage, messages }) {
       formatMessage(localization.fourthGreeting),
     ];
     if (messages[messages.length - 1].text !== greetingMessages[3]) {
-      addMessage(messageParser(greetingMessages, messages));
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        addMessage(messageParser(greetingMessages, messages));
+      }, MESSAGE_WAIT);
     }
   }, []);
 
@@ -31,6 +36,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   addMessage,
+  setIsLoading,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);

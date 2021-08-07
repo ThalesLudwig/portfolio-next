@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { addMessage } from "../config/messagesSlice";
+import { addMessage, setIsLoading } from "../config/messagesSlice";
 import messageParser from "../helpers/messageParser";
 import localization from "../lang/pages/SkillsPageLocalization";
 import { useIntl } from "react-intl";
+import { MESSAGE_WAIT } from "../constants/time";
 
-function Skills({ addMessage, messages }) {
+function Skills({ addMessage, setIsLoading, messages }) {
   const { formatMessage } = useIntl();
 
   useEffect(() => {
@@ -15,7 +16,11 @@ function Skills({ addMessage, messages }) {
       formatMessage(localization.thirdGreeting),
     ];
     if (messages[messages.length - 1].text !== greetingMessages[2]) {
-      addMessage(messageParser(greetingMessages, messages));
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        addMessage(messageParser(greetingMessages, messages));
+      }, MESSAGE_WAIT);
     }
   }, []);
 
@@ -30,6 +35,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   addMessage,
+  setIsLoading,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Skills);
