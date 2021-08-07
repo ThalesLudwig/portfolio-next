@@ -11,11 +11,12 @@ export const PT_BR = {
   "footer.talk": "Fale com eu-bot!",
   "footer.back": "Voltar",
   "chat.input": "Pressione Enter para enviar",
-  "chat.greeting.first": "Oi, bem-vindo ao meu portfólio!",
+  "chat.greeting.first": "Oi, bem-vindo ao meu portfólio! 😄",
   "chat.greeting.second": "Você está falando com uma versão automática de mim.",
   "chat.greeting.third": "Sinta-se à vontade para me perguntar algo!",
 
-  "career.greeting.first": "Aqui você pode ver minhas experiências relevantes.",
+  "career.greeting.first":
+    "Aqui você pode ver minhas experiências relevantes. 💼",
   "career.greeting.second":
     "Eu comecei com Java e PHP, mas logo migrei para o Javascript.",
   "career.greeting.third":
@@ -24,7 +25,7 @@ export const PT_BR = {
     "Se quiser mais detalhes, é só perguntar sobre 'carreira' ou 'experiência'.",
 
   "articles.greeting.first":
-    "Eu gosto de escrever sobre crescimento pessoal e a vida em geral!",
+    "Eu gosto de escrever sobre crescimento pessoal e a vida em geral! ✏️",
   "articles.greeting.second":
     "Mas estou tentando me direcionar para um campo mais técnico.",
   "articles.greeting.third":
@@ -33,11 +34,11 @@ export const PT_BR = {
   "contact.greeting.first": "Todos os mais canais sociais!",
   "contact.greeting.second":
     "Mas fique à vontade para enviar um bom e velho e-mail:",
-  "contact.greeting.third": "thales.ludwig@gmail.com",
+  "contact.greeting.third": "thales.ludwig@gmail.com 📧",
 
   "designs.greeting.first": "Eu sou apaixonado por UI e UX!",
   "designs.greeting.second":
-    "Tenho certeza que você vai notar um layout familiar ali. ;)",
+    "Tenho certeza que você vai notar um layout familiar ali. 😉",
   "designs.greeting.third":
     "Eu também recentemente adquiri uma formação em UX. Dê uma olhada na aba de Escolaridade!",
 
@@ -48,7 +49,7 @@ export const PT_BR = {
   "education.greeting.third":
     "Desenvolvimento de Apps Móveis e Experiência de Usuário (UX).",
   "education.greeting.fourth":
-    "Mas é como eu digo: Eu sou uma máquina de aprendizado constante. Eu constantemente estou estudando alguma nova tecnologia.",
+    "Mas é como eu digo: Eu sou uma máquina de aprendizado constante. Eu constantemente estou estudando alguma nova tecnologia. 🤓",
 
   "projects.greeting.first":
     "Todos os meus projetos estão disponíveis no Github, incluindo esse portfólio! É feito com React, NextJS, e Redux.",
@@ -57,10 +58,10 @@ export const PT_BR = {
   "projects.greeting.third":
     "A maior parte é puramente acadêmico, mas você provavelmente vai querer dar uma olhada no AIDEN.",
   "projects.greeting.fourth":
-    "O que é AIDEN? Sou eu! Bom, a minha API, pelo menos. Sério, vai lá ver o repositório. Eu espero.",
+    "O que é AIDEN? Sou eu! Bom, a minha API, pelo menos. Sério, vai lá ver o repositório. Eu espero. 🕑",
 
   "skills.greeting.first":
-    "Meu forte é em front-end com React, Angular, e Vue.",
+    "Meu forte é em front-end com React, Angular, e Vue. 💪",
   "skills.greeting.second":
     "Mas quando eu trabalho como full-stack, NodeJS é o meu favorito!",
   "skills.greeting.third":

@@ -11,12 +11,12 @@ export const EN_US = {
   "footer.talk": "Talk to bot-me!",
   "footer.back": "Go back",
   "chat.input": "Press Enter to send",
-  "chat.greeting.first": "Hi, welcome to my portfolio!",
+  "chat.greeting.first": "Hi, welcome to my portfolio! 😄",
   "chat.greeting.second": "You're talking to an automated version of me.",
   "chat.greeting.third": "Feel free to ask me anything!",
 
   "career.greeting.first":
-    "Here you have all my relevant professional experiences.",
+    "Here you have all my relevant professional experiences. 💼",
   "career.greeting.second":
     "I started with Java and PHP, but soon moved to Javascript.",
   "career.greeting.third":
@@ -25,18 +25,18 @@ export const EN_US = {
     "If you want more details, just ask here about 'career' or 'experience'.",
 
   "articles.greeting.first":
-    "I like to write personal growth and life in general!",
+    "I like to write personal growth and life in general! ✏️",
   "articles.greeting.second":
     "But I'm trying to move towards a more technical area.",
   "articles.greeting.third": "Keep an eye on my social media to see new stuff!",
 
   "contact.greeting.first": "All my social channels!",
   "contact.greeting.second": "But feel free to send me a good old e-mail:",
-  "contact.greeting.third": "thales.ludwig@gmail.com",
+  "contact.greeting.third": "thales.ludwig@gmail.com 📧",
 
   "designs.greeting.first": "I am passionate about UI and UX!",
   "designs.greeting.second":
-    "I'm sure you'll notice a familiar layout there. ;)",
+    "I'm sure you'll notice a familiar layout there. 😉",
   "designs.greeting.third":
     "I also recently aquired an academic degree in UX. Take a look at the Education tab!",
 
@@ -46,7 +46,7 @@ export const EN_US = {
     "After that I started two specializations at UniRitter University:",
   "education.greeting.third": "Mobile App Development and User Experience.",
   "education.greeting.fourth":
-    "But as I like to say: I'm an always-learning machine. You'll often find me studying some new technology.",
+    "But as I like to say: I'm an always-learning machine. You'll often find me studying some new technology. 🤓",
 
   "projects.greeting.first":
     "All of my projects are available on Github, including this portfolio! It's made with React, NextJS, and Redux.",
@@ -55,10 +55,10 @@ export const EN_US = {
   "projects.greeting.third":
     "Most of them are just academic stuff, but you'll probably want to take a look at AIDEN.",
   "projects.greeting.fourth":
-    "What's AIDEN? It's me! Well, my API at least. Seriously, go check that repository. I'll wait.",
+    "What's AIDEN? It's me! Well, my API at least. Seriously, go check that repository. I'll wait. 🕑",
 
   "skills.greeting.first":
-    "My strong suit is front-end with React, Angular, and Vue.",
+    "My strong suit is front-end with React, Angular, and Vue. 💪",
   "skills.greeting.second":
     "But when I'm working full-stack, NodeJS is my favorite!",
   "skills.greeting.third":
