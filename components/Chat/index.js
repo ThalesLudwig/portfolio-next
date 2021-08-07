@@ -16,7 +16,7 @@ import {
   SendButton,
 } from "./ChatStyled";
 
-function Chat({ location, messages, addMessage, isLoading }) {
+function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
   const { formatMessage } = useIntl();
   const scrollPanelRef = useRef(null);
   const router = useRouter();
