@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { useRouter } from "next/router";
 import Message from "../Message/Message";
-import MessageService from "../../services/messageService";
 import messageParser from "../../helpers/messageParser";
 import loadingMessage from "../../helpers/loadingMessage";
 import localization from "../../lang/pages/ChatPageLocalization";
 import { useIntl } from "react-intl";
 import { addMessage } from "../../config/messagesSlice";
+import submitForm from "./submitForm";
 import {
   Container,
   Input,
@@ -44,29 +44,6 @@ function Chat({ location, messages, addMessage }) {
     }
   }, []);
 
-  const submitForm = (event) => {
-    event && event.preventDefault();
-    if (input.trim().length > 0) {
-      const lastMessage = messages[messages.length - 1];
-      const inputMessage = {
-        id: new Date().getTime(),
-        text: input.trim(),
-        isPrimary: false,
-        hasAvatar: lastMessage.isPrimary,
-      };
-      addMessage(inputMessage);
-      setInput("");
-      setIsLoading(true);
-      MessageService.get(input, location)
-        .then((res) => {
-          const newMessages = messageParser(res.data);
-          addMessage(newMessages);
-        })
-        .catch((err) => console.log(err))
-        .finally(() => setIsLoading(false));
-    }
-  };
-
   const printMessages = () => {
     const messageList = [];
     messages.forEach((message) => {
@@ -87,7 +64,17 @@ function Chat({ location, messages, addMessage }) {
   return (
     <Container
       isChatPage={router.asPath === "/chat"}
-      onSubmit={(e) => submitForm(e)}
+      onSubmit={(e) =>
+        submitForm({
+          event: e,
+          input,
+          messages,
+          addMessage,
+          setInput,
+          setIsLoading,
+          location,
+        })
+      }
     >
       <ScrollPanel ref={scrollPanelRef}>
         {printMessages()}
@@ -100,7 +87,20 @@ function Chat({ location, messages, addMessage }) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <SendButton onClick={submitForm} width="25" height="25" />
+        <SendButton
+          onClick={() =>
+            submitForm({
+              input,
+              messages,
+              addMessage,
+              setInput,
+              setIsLoading,
+              location,
+            })
+          }
+          width="25"
+          height="25"
+        />
       </Input>
     </Container>
   );
