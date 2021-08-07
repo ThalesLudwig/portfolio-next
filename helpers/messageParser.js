@@ -17,7 +17,7 @@ const parser = (data, previousMessages) => {
       id: Math.random(),
       text: data,
       isPrimary: true,
-      hasAvatar: hasAvatar(previousMessages),
+      hasAvatar: hasAvatar(previousMessages, true),
     };
   }
 
