@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Avatar = styled.div`
-  background: ${({ theme }) => theme.colors.messages};
+  background: ${({ theme }) => theme.colors.messageBackground};
   background-image: ${({ isPrimary }) =>
     isPrimary ? `url('profile_anim.jpg')` : `url('avatar.jpeg')`};
   background-repeat: no-repeat;
@@ -21,12 +21,14 @@ export const Avatar = styled.div`
 
 export const TextArea = styled.div`
   background: ${({ isPrimary, theme }) =>
-    isPrimary ? theme.colors.primary : theme.colors.messages};
+    isPrimary ? theme.colors.primary : theme.colors.messageBackground};
   font-weight: 400;
   font-size: ${({ theme }) => theme.sizes.text};
   color: ${({ theme, isPrimary }) =>
-    isPrimary ? theme.colors.messages : theme.colors.text};
-  border-radius: 10px;
+    isPrimary
+      ? theme.colors.messageTextPrimary
+      : theme.colors.messageTextSecondary};
+  border-radius: 8px;
   padding: 10px 14px;
   display: flex;
   align-items: center;
@@ -39,7 +41,7 @@ export const TextArea = styled.div`
 
 export const Image = styled.div`
   background: ${({ isPrimary, theme }) =>
-    isPrimary ? theme.colors.primary : theme.colors.messages};
+    isPrimary ? theme.colors.primary : theme.colors.messageBackground};
   background: url(${({ src }) => src});
   background-size: cover;
   background-repeat: no-repeat;
@@ -57,7 +59,7 @@ export const MediaLink = styled.a`
 `;
 
 export const MediaIcon = styled.div`
-  background: ${({ theme }) => theme.colors.messages};
+  background: ${({ theme }) => theme.colors.messageBackground};
   background: url(${({ src }) => src});
   background-size: cover;
   background-repeat: no-repeat;
@@ -86,7 +88,7 @@ export const MediaCard = styled.div`
 
 export const MediaTitle = styled.div`
   font-weight: normal;
-  color: ${({ theme }) => theme.colors.title};
+  color: ${({ theme }) => theme.colors.messageMediaText};
   font-size: ${({ theme }) => theme.sizes.textSmall};
   display: flex;
   align-items: center;
@@ -95,7 +97,7 @@ export const MediaTitle = styled.div`
 export const MediaText = styled.div`
   font-weight: normal;
   font-size: ${({ theme }) => theme.sizes.textSmall};
-  color: ${({ theme }) => theme.colors.title};
+  color: ${({ theme }) => theme.colors.messageMediaText};
 `;
 
 export const MediaTitleTextWrapper = styled.div`
