@@ -13,4 +13,8 @@ export default defineMessages({
     id: "articles.greeting.third",
     defaultMessage: "Keep an eye on my social media to see new stuff!",
   },
+  title: {
+    id: "header.tabs.articles",
+    defaultMessage: "Articles",
+  },
 });

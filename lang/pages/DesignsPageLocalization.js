@@ -14,4 +14,8 @@ export default defineMessages({
     defaultMessage:
       "I also recently aquired an academic degree in UX. Take a look at the Education tab!",
   },
+  title: {
+    id: "header.tabs.designs",
+    defaultMessage: "Designs",
+  },
 });

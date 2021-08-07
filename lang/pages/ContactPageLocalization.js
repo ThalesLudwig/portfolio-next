@@ -13,4 +13,8 @@ export default defineMessages({
     id: "contact.greeting.third",
     defaultMessage: "thales.ludwig@gmail.com",
   },
+  title: {
+    id: "header.tabs.contact",
+    defaultMessage: "Contact",
+  },
 });

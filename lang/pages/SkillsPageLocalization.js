@@ -14,4 +14,8 @@ export default defineMessages({
     defaultMessage:
       "I'm also slowly expanding to mobile devices. At first with React Native, but now starting with Swift and Kotlin.",
   },
+  title: {
+    id: "header.tabs.skills",
+    defaultMessage: "Skills",
+  },
 });

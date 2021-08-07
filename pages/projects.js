@@ -5,6 +5,7 @@ import messageParser from "../helpers/messageParser";
 import localization from "../lang/pages/ProjectsPageLocalization";
 import { useIntl } from "react-intl";
 import { MESSAGE_WAIT } from "../constants/time";
+import PageHeader from "../components/PageHeader";
 
 function Projects({ addMessage, setIsLoading, messages }) {
   const { formatMessage } = useIntl();
@@ -25,7 +26,13 @@ function Projects({ addMessage, setIsLoading, messages }) {
     }
   }, []);
 
-  return <div>Projects</div>;
+  return (
+    <div>
+      <PageHeader title={`${formatMessage(localization.title)} 💻`}>
+        Lorem ipsum dolor sit amet.
+      </PageHeader>
+    </div>
+  );
 }
 
 const mapStateToProps = (state) => {

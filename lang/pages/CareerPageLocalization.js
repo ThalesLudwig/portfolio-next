@@ -19,4 +19,8 @@ export default defineMessages({
     defaultMessage:
       "If you want more details, just ask here about 'career' or 'experience'.",
   },
+  title: {
+    id: "header.tabs.career",
+    defaultMessage: "Career",
+  },
 });

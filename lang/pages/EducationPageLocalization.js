@@ -20,4 +20,8 @@ export default defineMessages({
     defaultMessage:
       "But as I like to say: I'm an always-learning machine. You'll often find me studying some new technology.",
   },
+  title: {
+    id: "header.tabs.education",
+    defaultMessage: "Education",
+  },
 });

@@ -21,4 +21,8 @@ export default defineMessages({
     defaultMessage:
       "What's AIDEN? It's me! Well, my API at least. Seriously, go check that repository. I'll wait.",
   },
+  title: {
+    id: "header.tabs.projects",
+    defaultMessage: "Projects",
+  },
 });

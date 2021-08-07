@@ -5,6 +5,7 @@ import messageParser from "../helpers/messageParser";
 import localization from "../lang/pages/SkillsPageLocalization";
 import { useIntl } from "react-intl";
 import { MESSAGE_WAIT } from "../constants/time";
+import PageHeader from "../components/PageHeader";
 
 function Skills({ addMessage, setIsLoading, messages }) {
   const { formatMessage } = useIntl();
@@ -24,7 +25,13 @@ function Skills({ addMessage, setIsLoading, messages }) {
     }
   }, []);
 
-  return <div>Skills</div>;
+  return (
+    <div>
+      <PageHeader title={`${formatMessage(localization.title)} 🛠️`}>
+        Lorem ipsum dolor sit amet.
+      </PageHeader>
+    </div>
+  );
 }
 
 const mapStateToProps = (state) => {
