@@ -14,4 +14,12 @@ export const PT_BR = {
   "chat.greeting.first": "Oi, bem-vindo ao meu portfólio!",
   "chat.greeting.second": "Você está falando com uma versão automática de mim.",
   "chat.greeting.third": "Sinta-se à vontade para me perguntar algo!",
+
+  "career.greeting.first": "Aqui você pode ver minhas experiências relevantes.",
+  "career.greeting.second":
+    "Eu comecei com Java e PHP, mas logo migrei para o Javascript.",
+  "career.greeting.third":
+    "Fora isso, eu estou sempre trabalhando em algum projeto pararelo.",
+  "career.greeting.fourth":
+    "Se quiser mais detalhes, é só perguntar sobre 'carreira' ou 'experiência'.",
 };

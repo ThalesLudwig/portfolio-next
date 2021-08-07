@@ -1,4 +1,13 @@
-const parser = (data) => {
+const hasAvatar = (previousMessages) => {
+  if (!!previousMessages) {
+    const lastMessage = previousMessages[previousMessages.length - 1];
+    return !lastMessage.isPrimary;
+  } else {
+    return true;
+  }
+};
+
+const parser = (data, previousMessages) => {
   const messages = [];
 
   if (typeof data === "string") {
@@ -6,7 +15,7 @@ const parser = (data) => {
       id: Math.random(),
       text: data,
       isPrimary: true,
-      hasAvatar: true,
+      hasAvatar: hasAvatar(previousMessages),
     };
   }
 
@@ -17,7 +26,7 @@ const parser = (data) => {
         id: Math.random(),
         text: currentResponse,
         isPrimary: true,
-        hasAvatar: i === 0,
+        hasAvatar: hasAvatar(previousMessages),
       });
     } else {
       if (typeof currentResponse.data === "string") {
