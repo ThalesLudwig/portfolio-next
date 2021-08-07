@@ -7,6 +7,7 @@ import messageParser from "../../helpers/messageParser";
 import loadingMessage from "../../helpers/loadingMessage";
 import localization from "../../lang/pages/ChatPageLocalization";
 import { useIntl } from "react-intl";
+import { addMessage } from "../../config/messagesSlice";
 import {
   Container,
   Input,
@@ -15,25 +16,23 @@ import {
   SendButton,
 } from "./ChatStyled";
 
-function Chat({ location }) {
+function Chat({ location, messages, addMessage }) {
   const { formatMessage } = useIntl();
   const scrollPanelRef = useRef(null);
   const router = useRouter();
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
-    const greetingMessages = [
-      formatMessage(localization.firstGreeting),
-      formatMessage(localization.secondGreeting),
-      formatMessage(localization.thirdGreeting),
-    ];
-    setTimeout(() => {
-      setMessages(messageParser(greetingMessages));
-      setIsLoading(false);
-    }, 500);
+    if (messages.length === 0) {
+      addMessage(
+        messageParser([
+          formatMessage(localization.firstGreeting),
+          formatMessage(localization.secondGreeting),
+          formatMessage(localization.thirdGreeting),
+        ]),
+      );
+    }
   }, [location]);
 
   useEffect(() => {
@@ -55,13 +54,13 @@ function Chat({ location }) {
         isPrimary: false,
         hasAvatar: lastMessage.isPrimary,
       };
-      setMessages(messages.concat(inputMessage));
+      addMessage(inputMessage);
       setInput("");
       setIsLoading(true);
       MessageService.get(input, location)
         .then((res) => {
           const newMessages = messageParser(res.data);
-          setMessages(messages.concat(inputMessage).concat(newMessages));
+          addMessage(newMessages);
         })
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false));
@@ -91,7 +90,7 @@ function Chat({ location }) {
       onSubmit={(e) => submitForm(e)}
     >
       <ScrollPanel ref={scrollPanelRef}>
-        {printMessages(messages)}
+        {printMessages()}
         {isLoading && <Message {...loadingMessage} />}
       </ScrollPanel>
       <Input>
@@ -110,7 +109,12 @@ function Chat({ location }) {
 const mapStateToProps = (state) => {
   return {
     location: state.location.value,
+    messages: state.messages.value,
   };
 };
 
-export default connect(mapStateToProps)(Chat);
+const mapDispatchToProps = {
+  addMessage,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Chat);

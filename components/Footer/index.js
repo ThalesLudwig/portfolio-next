@@ -6,6 +6,7 @@ import LANG_CONSTANTS from "../../constants/lang";
 import Link from "next/link";
 import localization from "./localization";
 import { useIntl } from "react-intl";
+import { clearMessages } from "../../config/messagesSlice";
 import {
   Container,
   Avatar,
@@ -23,6 +24,7 @@ function Footer({
   setLightTheme,
   setEnglish,
   setPortuguese,
+  clearMessages,
 }) {
   const { formatMessage } = useIntl();
   const router = useRouter();
@@ -49,14 +51,20 @@ function Footer({
           height={35}
           src="usa_flag.png"
           isActive={location === LANG_CONSTANTS.EN}
-          onClick={() => setEnglish()}
+          onClick={() => {
+            clearMessages();
+            setEnglish();
+          }}
         />
         <FlagImage
           width={50}
           height={35}
           src="brazil_flag.png"
           isActive={location === LANG_CONSTANTS.BR}
-          onClick={() => setPortuguese()}
+          onClick={() => {
+            clearMessages();
+            setPortuguese();
+          }}
         />
       </FlagWrapper>
     </Container>
@@ -75,6 +83,7 @@ const mapDispatchToProps = {
   setLightTheme,
   setEnglish,
   setPortuguese,
+  clearMessages,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);

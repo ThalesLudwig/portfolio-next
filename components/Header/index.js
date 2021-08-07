@@ -6,6 +6,7 @@ import LANG_CONSTANTS from "../../constants/lang";
 import Link from "next/link";
 import localization from "./localization";
 import { useIntl } from "react-intl";
+import { clearMessages } from "../../config/messagesSlice";
 import {
   Container,
   Tab,
@@ -28,6 +29,7 @@ function Header({
   setLightTheme,
   setEnglish,
   setPortuguese,
+  clearMessages,
 }) {
   const router = useRouter();
   const { formatMessage } = useIntl();
@@ -55,14 +57,20 @@ function Header({
             height={35}
             src="usa_flag.png"
             isActive={location === LANG_CONSTANTS.EN}
-            onClick={() => setEnglish()}
+            onClick={() => {
+              clearMessages();
+              setEnglish();
+            }}
           />
           <FlagImage
             width={50}
             height={35}
             src="brazil_flag.png"
             isActive={location === LANG_CONSTANTS.BR}
-            onClick={() => setPortuguese()}
+            onClick={() => {
+              clearMessages();
+              setPortuguese();
+            }}
           />
         </FlagWrapper>
       </FlagProfileWrapper>
@@ -124,6 +132,7 @@ const mapDispatchToProps = {
   setLightTheme,
   setEnglish,
   setPortuguese,
+  clearMessages,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
