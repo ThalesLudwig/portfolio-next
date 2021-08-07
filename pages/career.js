@@ -15,7 +15,9 @@ function Career({ addMessage, messages }) {
       formatMessage(localization.thirdGreeting),
       formatMessage(localization.fourthGreeting),
     ];
-    addMessage(messageParser(greetingMessages, messages));
+    if (messages[messages.length - 1].text !== greetingMessages[3]) {
+      addMessage(messageParser(greetingMessages, messages));
+    }
   }, []);
 
   return <div>Career</div>;

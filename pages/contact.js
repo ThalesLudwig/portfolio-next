@@ -14,7 +14,9 @@ function Contact({ addMessage, messages }) {
       formatMessage(localization.secondGreeting),
       formatMessage(localization.thirdGreeting),
     ];
-    addMessage(messageParser(greetingMessages, messages));
+    if (messages[messages.length - 1].text !== greetingMessages[2]) {
+      addMessage(messageParser(greetingMessages, messages));
+    }
   }, []);
 
   return <div>Contact</div>;
