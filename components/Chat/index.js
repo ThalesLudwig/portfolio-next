@@ -54,6 +54,7 @@ function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
           text={message.text}
           media={message.media}
           image={message.image}
+          isAlt={message.isAlt}
         />,
       );
     });

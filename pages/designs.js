@@ -20,6 +20,9 @@ function Designs({ addMessage, setIsLoading, messages }) {
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
+        addMessage(
+          messageParser({ text: formatMessage(localization.about) }, messages),
+        );
         addMessage(messageParser(greetingMessages, messages));
       }, MESSAGE_WAIT);
     }

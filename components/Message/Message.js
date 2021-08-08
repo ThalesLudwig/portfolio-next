@@ -48,13 +48,14 @@ const renderMedia = (mediaList) => {
   return medias;
 };
 
-const Message = ({ isPrimary, text, hasAvatar, image, media }) => {
+const Message = ({ isPrimary, text, hasAvatar, image, media, isAlt }) => {
   const hasManyMedia = media.length > 1;
+
   return (
     <Container isPrimary={isPrimary}>
       {hasAvatar && <Avatar isPrimary={isPrimary} />}
       {!image.id && media.length === 0 && (
-        <TextArea hasAvatar={hasAvatar} isPrimary={isPrimary}>
+        <TextArea hasAvatar={hasAvatar} isPrimary={isPrimary} isAlt={isAlt}>
           {text}
         </TextArea>
       )}
@@ -76,6 +77,7 @@ const Message = ({ isPrimary, text, hasAvatar, image, media }) => {
 
 Message.propTypes = {
   isPrimary: PropTypes.bool,
+  isAlt: PropTypes.bool,
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   hasAvatar: PropTypes.bool,
   media: PropTypes.array,
@@ -84,6 +86,7 @@ Message.propTypes = {
 
 Message.defaultProps = {
   isPrimary: false,
+  isAlt: false,
   text: "",
   hasAvatar: false,
   media: [],

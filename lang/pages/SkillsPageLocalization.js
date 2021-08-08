@@ -18,4 +18,8 @@ export default defineMessages({
     id: "header.tabs.skills",
     defaultMessage: "Skills",
   },
+  about: {
+    id: "chat.skills.about",
+    defaultMessage: "About my skills... 🛠️",
+  },
 });

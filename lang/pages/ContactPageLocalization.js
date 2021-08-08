@@ -17,4 +17,8 @@ export default defineMessages({
     id: "header.tabs.contact",
     defaultMessage: "Contact",
   },
+  about: {
+    id: "chat.contact.about",
+    defaultMessage: "About contact... 💬",
+  },
 });

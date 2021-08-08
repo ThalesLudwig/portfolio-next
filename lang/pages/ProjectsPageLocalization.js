@@ -25,4 +25,8 @@ export default defineMessages({
     id: "header.tabs.projects",
     defaultMessage: "Projects",
   },
+  about: {
+    id: "chat.projects.about",
+    defaultMessage: "About projects... 💻",
+  },
 });

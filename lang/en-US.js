@@ -63,4 +63,12 @@ export const EN_US = {
     "But when I'm working full-stack, NodeJS is my favorite!",
   "skills.greeting.third":
     "I'm also slowly expanding to mobile devices. At first with React Native, but now starting with Swift and Kotlin.",
+
+  "chat.articles.about": "About articles... 📰",
+  "chat.career.about": "About my career... 💼",
+  "chat.contact.about": "About contact... 💬",
+  "chat.designs.about": "About designs... ✍️",
+  "chat.education.about": "About education... 📚",
+  "chat.projects.about": "About projects... 💻",
+  "chat.skills.about": "About my skills... 🛠️",
 };

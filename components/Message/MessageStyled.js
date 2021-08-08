@@ -20,14 +20,26 @@ export const Avatar = styled.div`
 `;
 
 export const TextArea = styled.div`
-  background: ${({ isPrimary, theme }) =>
-    isPrimary ? theme.colors.primary : theme.colors.messageBackground};
+  background: ${({ isPrimary, isAlt, theme }) => {
+    if (isAlt) {
+      return theme.colors.secondary;
+    } else if (isPrimary) {
+      return theme.colors.primary;
+    } else {
+      return theme.colors.messageBackground;
+    }
+  }};
   font-weight: 400;
   font-size: ${({ theme }) => theme.sizes.text};
-  color: ${({ theme, isPrimary }) =>
-    isPrimary
-      ? theme.colors.messageTextPrimary
-      : theme.colors.messageTextSecondary};
+  color: ${({ theme, isPrimary, isAlt }) => {
+    if (isAlt) {
+      return theme.colors.messageMediaText;
+    } else if (isPrimary) {
+      return theme.colors.messageTextPrimary;
+    } else {
+      return theme.colors.messageTextSecondary;
+    }
+  }};
   border-radius: 8px;
   padding: 10px 14px;
   display: flex;

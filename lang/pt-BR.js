@@ -31,7 +31,7 @@ export const PT_BR = {
   "articles.greeting.third":
     "Fique de olho nas minhas redes sociais para ver coisas novas!",
 
-  "contact.greeting.first": "Todos os mais canais sociais!",
+  "contact.greeting.first": "Todos os meus canais sociais!",
   "contact.greeting.second":
     "Mas fique à vontade para enviar um bom e velho e-mail:",
   "contact.greeting.third": "thales.ludwig@gmail.com 📧",
@@ -66,4 +66,12 @@ export const PT_BR = {
     "Mas quando eu trabalho como full-stack, NodeJS é o meu favorito!",
   "skills.greeting.third":
     "Eu estou lentamente expandindo para dispositivos móveis. Primeiramente com React Native, mas agora começando com Swift e Kotlin.",
+
+  "chat.articles.about": "Sobre artigos... 📰",
+  "chat.career.about": "Sobre minha carreira... 💼",
+  "chat.contact.about": "Sobre contato... 💬",
+  "chat.designs.about": "Sobre designs... ✍️",
+  "chat.education.about": "Sobre escolaridade... 📚",
+  "chat.projects.about": "Sobre projetos... 💻",
+  "chat.skills.about": "Sobre minhas habilidades... 🛠️",
 };

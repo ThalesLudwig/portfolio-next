@@ -1,1 +1,1 @@
-export const MESSAGE_WAIT = 2000;
+export const MESSAGE_WAIT = 800;

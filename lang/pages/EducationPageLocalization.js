@@ -24,4 +24,8 @@ export default defineMessages({
     id: "header.tabs.education",
     defaultMessage: "Education",
   },
+  about: {
+    id: "chat.education.about",
+    defaultMessage: "About education... 📚",
+  },
 });

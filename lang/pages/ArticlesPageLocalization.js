@@ -17,4 +17,8 @@ export default defineMessages({
     id: "header.tabs.articles",
     defaultMessage: "Articles",
   },
+  about: {
+    id: "chat.articles.about",
+    defaultMessage: "About articles... 📰",
+  },
 });

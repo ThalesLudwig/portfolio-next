@@ -18,4 +18,8 @@ export default defineMessages({
     id: "header.tabs.designs",
     defaultMessage: "Designs",
   },
+  about: {
+    id: "chat.designs.about",
+    defaultMessage: "About designs... ✍️",
+  },
 });
