@@ -80,6 +80,11 @@ function Header({
             {formatMessage(localization.aboutMe)}
           </Tab>
         </Link>
+        <Link href="/contact">
+          <Tab isActive={isActiveRoute("/contact")}>
+            {formatMessage(localization.contact)}
+          </Tab>
+        </Link>
         <Link href="/skills">
           <Tab isActive={isActiveRoute("/skills")}>
             {formatMessage(localization.skills)}
@@ -103,11 +108,6 @@ function Header({
         <Link href="/articles">
           <Tab isActive={isActiveRoute("/articles")}>
             {formatMessage(localization.articles)}
-          </Tab>
-        </Link>
-        <Link href="/contact">
-          <Tab isActive={isActiveRoute("/contact")}>
-            {formatMessage(localization.contact)}
           </Tab>
         </Link>
         <Link href="/designs">

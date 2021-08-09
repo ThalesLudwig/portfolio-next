@@ -71,4 +71,19 @@ export const EN_US = {
   "chat.education.about": "About education... 📚",
   "chat.projects.about": "About projects... 💻",
   "chat.skills.about": "About my skills... 🛠️",
+
+  "about.hero":
+    "I'm a full-stack software engineer, UI/UX Designer, and remote lifestyle enthusiast. I am an always-learning machine that converts energy drinks into clean and scalable code.",
+  "articles.hero":
+    "I like to write about career and life in general when I have time, but I'm also planning on writing about technical subjects.",
+  "career.hero": "My professional journey until this point.",
+  "contact.hero":
+    "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
+  "designs.hero":
+    "Though my focus is engineering, I also work as a UI/UX designer.",
+  "education.hero":
+    "These are my academic qualifications. I'm also constantly learning new stuff by myself!",
+  "projects.hero":
+    "My most recent projects. Some of them are purely academic to demonstrate the use of a certain technology.",
+  "skills.hero": "This is the list of what I can do.",
 };

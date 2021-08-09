@@ -21,4 +21,9 @@ export default defineMessages({
     id: "chat.articles.about",
     defaultMessage: "About articles... 📰",
   },
+  header: {
+    id: "articles.hero",
+    defaultMessage:
+      "I like to write about career and life in general when I have time, but I'm also planning on writing about technical subjects.",
+  },
 });

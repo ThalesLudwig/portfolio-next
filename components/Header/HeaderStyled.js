@@ -14,6 +14,7 @@ export const Container = styled.div`
 export const NavigationWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   &::-webkit-scrollbar-track {
     display: none;

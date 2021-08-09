@@ -31,7 +31,7 @@ function Skills({ addMessage, setIsLoading, messages }) {
   return (
     <div>
       <PageHeader title={`${formatMessage(localization.title)} 🛠️`}>
-        Lorem ipsum dolor sit amet.
+        {formatMessage(localization.header)}
       </PageHeader>
     </div>
   );

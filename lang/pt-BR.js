@@ -74,4 +74,19 @@ export const PT_BR = {
   "chat.education.about": "Sobre escolaridade... 📚",
   "chat.projects.about": "Sobre projetos... 💻",
   "chat.skills.about": "Sobre minhas habilidades... 🛠️",
+
+  "about.hero":
+    "Sou engenheiro de software, UI/UX Designer, e entusiasta de lifestyle remoto. Eu sou uma máquina de aprendizado que converte energéticos em código limpo e escalável.",
+  "articles.hero":
+    "Eu gosto de escrever sobre carreira e a vida em geral quando tenho tempo, mas também estou planejando escrever sobre assuntos mais técnicos.",
+  "career.hero": "Minha jornada profissional até este momento.",
+  "contact.hero":
+    "Você pode entrar em contato comigo de todas essas formas. Ou use o e-mail: thales.ludwig@gmail.com",
+  "designs.hero":
+    "Embora meu foco esteja na engenharia, eu também atuo como designer de UI/UX.",
+  "education.hero":
+    "Estas são minhas qualificações acadêmicas. Eu também estou constantemente aprendendo coisas novas por conta própria!",
+  "projects.hero":
+    "Meus projetos mais recentes. Alguns deles são puramente acadêmicos para demonstrar o uso de uma determinada tecnologia.",
+  "skills.hero": "Aqui está uma lista do que eu posso fazer.",
 };

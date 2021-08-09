@@ -22,4 +22,8 @@ export default defineMessages({
     id: "chat.skills.about",
     defaultMessage: "About my skills... 🛠️",
   },
+  header: {
+    id: "skills.hero",
+    defaultMessage: "This is the list of what I can do.",
+  },
 });

@@ -28,4 +28,9 @@ export default defineMessages({
     id: "chat.education.about",
     defaultMessage: "About education... 📚",
   },
+  header: {
+    id: "education.hero",
+    defaultMessage:
+      "These are my academic qualifications. I'm also constantly learning new stuff by myself!",
+  },
 });

@@ -22,4 +22,9 @@ export default defineMessages({
     id: "chat.designs.about",
     defaultMessage: "About designs... ✍️",
   },
+  header: {
+    id: "designs.hero",
+    defaultMessage:
+      "Though my focus is engineering, I also work as a UI/UX designer.",
+  },
 });

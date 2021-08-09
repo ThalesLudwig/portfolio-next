@@ -1,12 +1,14 @@
 import PageHeader from "../components/PageHeader";
+import localization from "../lang/pages/AboutPageLocalization";
+import { useIntl } from "react-intl";
 
 export default function Home() {
+  const { formatMessage } = useIntl();
+
   return (
     <div>
       <PageHeader title="Hello!" subtitle="I'm Thales Ludwig. 👋">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        auctor mauris urna, vel tempor elit bibendum in. Sed bibendum, diam eget
-        rhoncus elementum, urna velit sagittis augue, sit amet sodales velit
+        {formatMessage(localization.header)}
         lacus nec dui.
       </PageHeader>
       About me

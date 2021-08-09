@@ -27,4 +27,8 @@ export default defineMessages({
     id: "chat.career.about",
     defaultMessage: "About my career... 💼",
   },
+  header: {
+    id: "career.hero",
+    defaultMessage: "My professional journey until this point.",
+  },
 });

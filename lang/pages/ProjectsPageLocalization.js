@@ -29,4 +29,9 @@ export default defineMessages({
     id: "chat.projects.about",
     defaultMessage: "About projects... 💻",
   },
+  header: {
+    id: "projects.hero",
+    defaultMessage:
+      "My most recent projects. Some of them are purely academic to demonstrate the use of a certain technology.",
+  },
 });

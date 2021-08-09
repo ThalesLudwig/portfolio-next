@@ -21,4 +21,9 @@ export default defineMessages({
     id: "chat.contact.about",
     defaultMessage: "About contact... 💬",
   },
+  header: {
+    id: "contact.hero",
+    defaultMessage:
+      "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
+  },
 });
