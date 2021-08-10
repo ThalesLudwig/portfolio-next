@@ -6,6 +6,8 @@ import localization from "../lang/pages/DesignsPageLocalization";
 import { useIntl } from "react-intl";
 import { MESSAGE_WAIT } from "../constants/time";
 import PageHeader from "../components/PageHeader";
+import { Content, DesignList } from "../styles/pages/DesignsPage";
+import DesignCard from "../components/Design";
 
 function Designs({ addMessage, setIsLoading, messages }) {
   const { formatMessage } = useIntl();
@@ -29,11 +31,23 @@ function Designs({ addMessage, setIsLoading, messages }) {
   }, []);
 
   return (
-    <div>
+    <Content>
       <PageHeader title={`${formatMessage(localization.title)} ✍️`}>
         {formatMessage(localization.header)}
       </PageHeader>
-    </div>
+      <DesignList>
+        <DesignCard
+          image="designs/design_1.png"
+          title="Developer-friendly Porfolio"
+          url="https://dribbble.com/shots/16123641-Developer-friendly-Porfolio"
+        />
+        <DesignCard
+          image="designs/design_2.png"
+          title="Socialfy - Developer-friendly social network"
+          url="https://dribbble.com/shots/16124088-Socialfy-Developer-friendly-social-network"
+        />
+      </DesignList>
+    </Content>
   );
 }
 
