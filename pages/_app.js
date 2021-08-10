@@ -19,7 +19,6 @@ function App({ Component, pageProps }) {
             <title>Thales Ludwig</title>
             <meta name="description" content="Thales' Portfolio" />
             <link rel="icon" href="/meta/icon.png" />
-            <meta name="twitter:card" content="summary" key="twcard" />
             <meta
               property="og:title"
               content="Portfolio - Thales"
@@ -27,7 +26,7 @@ function App({ Component, pageProps }) {
             />
             <meta
               property="og:description"
-              content="Thales Valentini's portfolio"
+              content="Thales Ludwig's portfolio"
               key="ogdescription"
             />
             <meta property="og:image" content="/meta/thumb.jpg" key="ogimage" />
@@ -46,6 +45,29 @@ function App({ Component, pageProps }) {
               content="https://thalesludwig.vercel.app/"
               key="ogurl"
             />
+
+            <meta itemprop="name" content="Thales Ludwig" key="propname" />
+            <meta
+              itemprop="description"
+              content="Thales Ludwig's portfolio"
+              key="propdesc"
+            />
+            <meta itemprop="image" content="/meta/thumb.jpg" key="propimage" />
+
+            <meta name="twitter:card" content="summary" key="twcard" />
+            <meta name="twitter:title" content="Thales Ludwig" key="twtitle" />
+            <meta
+              name="twitter:description"
+              content="Thales Ludwig's portfolio"
+              key="twdescription"
+            />
+            <meta
+              name="twitter:image"
+              content="/meta/thumb.jpg"
+              key="twimage"
+            />
+            <meta name="image" content="/meta/thumb.jpg" key="nameimage" />
+            <meta name="og:image" content="/meta/thumb.jpg" key="nameogimage" />
           </Head>
           <IntlProvider>
             <Content>
