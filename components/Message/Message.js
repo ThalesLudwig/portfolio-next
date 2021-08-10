@@ -18,15 +18,15 @@ import {
 const renderIcon = ({ media }) => {
   switch (media) {
     case MEDIA.GITHUB:
-      return "github.png";
+      return "social/github.png";
     case MEDIA.TWITTER:
-      return "twitter.png";
+      return "social/twitter.png";
     case MEDIA.LINKEDIN:
-      return "linkedin.png";
+      return "social/linkedin.svg";
     case MEDIA.PLAYSTORE:
-      return "playstore.jpeg";
+      return "social/playstore.jpeg";
     default:
-      return "email.png";
+      return "ellipsis.svg";
   }
 };
 
