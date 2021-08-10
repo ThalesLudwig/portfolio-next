@@ -42,4 +42,12 @@ export default defineMessages({
     id: "about.news.four",
     defaultMessage: "Studying Swift.",
   },
+  hello: {
+    id: "about.hello",
+    defaultMessage: "Hello!",
+  },
+  name: {
+    id: "about.name",
+    defaultMessage: "I'm Thales Ludwig.",
+  },
 });

@@ -123,4 +123,7 @@ export const PT_BR = {
   "education.school.course.development": "Desenvolvimento de Sistemas",
   "education.school.course.ux": "Experiência de Usuário (UI/UX)",
   "education.school.course.mobile": "Desenvolvimento de aplicações móveis",
+
+  "about.hello": "Olá!",
+  "about.name": "Sou Thales Ludwig.",
 };

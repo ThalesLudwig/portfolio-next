@@ -10,6 +10,7 @@ export const HireMe = styled.div`
   color: ${({ theme }) => theme.colors.title};
   font-weight: ${({ theme }) => theme.sizes.subtitle};
   cursor: pointer;
+  padding: 10px 0px;
 
   @media (max-width: ${MOBILE}) {
     padding: 0px 20px;

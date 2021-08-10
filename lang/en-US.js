@@ -119,4 +119,7 @@ export const EN_US = {
   "education.school.course.development": "Development of Systems",
   "education.school.course.ux": "User Experience",
   "education.school.course.mobile": "Mobile Apps Development",
+
+  "about.hello": "Hello!",
+  "about.name": "I'm Thales Ludwig.",
 };

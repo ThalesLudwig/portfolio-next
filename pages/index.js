@@ -18,7 +18,10 @@ export default function Home() {
 
   return (
     <Content>
-      <PageHeader title="Hello!" subtitle="I'm Thales Ludwig. 👋">
+      <PageHeader
+        title={formatMessage(localization.hello)}
+        subtitle={`${formatMessage(localization.name)} 👋`}
+      >
         {formatMessage(localization.header)}
       </PageHeader>
       <Link href="/contact">
