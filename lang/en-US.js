@@ -108,6 +108,7 @@ export const EN_US = {
   "contact.social.coffee": "In case you really, really like my work.",
   "contact.social.facebook":
     "Usually just for friends and family, but hey, go ahead if you want.",
+  "contact.social.medium": "Where I publish my texts. When I have the time.",
 
   "education.school.title.qi": "QI University",
   "education.school.title.uniritter": "Uniritter University",

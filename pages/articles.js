@@ -6,6 +6,8 @@ import localization from "../lang/pages/ArticlesPageLocalization";
 import { useIntl } from "react-intl";
 import { MESSAGE_WAIT } from "../constants/time";
 import PageHeader from "../components/PageHeader";
+import Article from "../components/Article";
+import { Content, ArticlesList } from "../styles/pages/ArticlesPage";
 
 function Articles({ addMessage, setIsLoading, messages }) {
   const { formatMessage } = useIntl();
@@ -29,11 +31,31 @@ function Articles({ addMessage, setIsLoading, messages }) {
   }, []);
 
   return (
-    <div>
+    <Content>
       <PageHeader title={`${formatMessage(localization.title)} 📰`}>
         {formatMessage(localization.header)}
       </PageHeader>
-    </div>
+      <ArticlesList>
+        <Article
+          image="articles/article_1.jpeg"
+          title="The Mid-twenties Crisis"
+          time="4"
+          url="https://medium.com/@thalesludwig/the-mid-twenties-crisis-186e87ed849e"
+        />
+        <Article
+          image="articles/article_2.jpeg"
+          title="You’re a Slave of Your Money"
+          time="4"
+          url="https://medium.com/@thalesludwig/youre-a-slave-of-your-money-797bbaf59c35"
+        />
+        <Article
+          image="articles/article_3.jpeg"
+          title="What They Didn’t Tell You About the Time"
+          time="4"
+          url="https://medium.com/@thalesludwig/what-they-didnt-tell-you-about-time-8b742ad4065e"
+        />
+      </ArticlesList>
+    </Content>
   );
 }
 

@@ -112,6 +112,7 @@ export const PT_BR = {
   "contact.social.coffee": "Caso você goste muito, muito do meu trabalho.",
   "contact.social.facebook":
     "Normalmente só para família e amigos, mas ei, vá em frente se quiser.",
+  "contact.social.medium": "Onde eu publico meus textos. Quando tenho tempo.",
 
   "education.school.title.qi": "Faculdades QI",
   "education.school.title.uniritter": "Universidade Uniritter",

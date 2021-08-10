@@ -57,6 +57,15 @@ function Contact({ addMessage, setIsLoading, messages }) {
         >
           {formatMessage(localization.dribbble)}
         </ContactComponent>
+
+        <ContactComponent
+          image="social/medium.jpeg"
+          title="Medium"
+          url="https://medium.com/@thalesludwig"
+        >
+          {formatMessage(localization.medium)}
+        </ContactComponent>
+
         <ContactComponent
           image="social/instagram.png"
           title="Instagram"

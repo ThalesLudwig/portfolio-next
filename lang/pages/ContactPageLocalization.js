@@ -56,4 +56,8 @@ export default defineMessages({
     defaultMessage:
       "Usually just for friends and family, but hey, go ahead if you want.",
   },
+  medium: {
+    id: "contact.social.medium",
+    defaultMessage: "Where I publish my texts. When I have the time.",
+  },
 });
