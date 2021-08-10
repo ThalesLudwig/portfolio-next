@@ -112,4 +112,15 @@ export const PT_BR = {
   "contact.social.coffee": "Caso você goste muito, muito do meu trabalho.",
   "contact.social.facebook":
     "Normalmente só para família e amigos, mas ei, vá em frente se quiser.",
+
+  "education.school.title.qi": "Faculdades QI",
+  "education.school.title.uniritter": "Universidade Uniritter",
+  "education.school.country": "Brasil",
+  "education.school.status.completed": "Completo",
+  "education.school.status.ongoing": "Em andamento",
+  "education.school.degree.graduation": "Graduação",
+  "education.school.degree.specialization": "Especialização",
+  "education.school.course.development": "Desenvolvimento de Sistemas",
+  "education.school.course.ux": "Experiência de Usuário (UI/UX)",
+  "education.school.course.mobile": "Desenvolvimento de aplicações móveis",
 };

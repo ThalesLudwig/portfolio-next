@@ -108,4 +108,15 @@ export const EN_US = {
   "contact.social.coffee": "In case you really, really like my work.",
   "contact.social.facebook":
     "Usually just for friends and family, but hey, go ahead if you want.",
+
+  "education.school.title.qi": "QI University",
+  "education.school.title.uniritter": "Uniritter University",
+  "education.school.country": "Brazil",
+  "education.school.status.completed": "Completed",
+  "education.school.status.ongoing": "Ongoing",
+  "education.school.degree.graduation": "Graduation",
+  "education.school.degree.specialization": "Specialization",
+  "education.school.course.development": "Development of Systems",
+  "education.school.course.ux": "User Experience",
+  "education.school.course.mobile": "Mobile Apps Development",
 };

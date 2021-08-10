@@ -33,4 +33,44 @@ export default defineMessages({
     defaultMessage:
       "These are my academic qualifications. I'm also constantly learning new stuff by myself!",
   },
+  schoolTitleQI: {
+    id: "education.school.title.qi",
+    defaultMessage: "QI University",
+  },
+  schoolTitleUniritter: {
+    id: "education.school.title.uniritter",
+    defaultMessage: "Uniritter University",
+  },
+  country: {
+    id: "education.school.country",
+    defaultMessage: "Brazil",
+  },
+  statusCompleted: {
+    id: "education.school.status.completed",
+    defaultMessage: "Completed",
+  },
+  statusOngoing: {
+    id: "education.school.status.ongoing",
+    defaultMessage: "Ongoing",
+  },
+  degreeGraduation: {
+    id: "education.school.degree.graduation",
+    defaultMessage: "Graduation",
+  },
+  degreeSpecialization: {
+    id: "education.school.degree.specialization",
+    defaultMessage: "Specialization",
+  },
+  courseDevelopment: {
+    id: "education.school.course.development",
+    defaultMessage: "Development of Systems",
+  },
+  courseUx: {
+    id: "education.school.course.ux",
+    defaultMessage: "User Experience",
+  },
+  courseMobile: {
+    id: "education.school.course.mobile",
+    defaultMessage: "Mobile Apps Development",
+  },
 });
