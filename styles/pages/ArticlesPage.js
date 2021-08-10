@@ -11,6 +11,7 @@ export const ArticlesList = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 30px;
+  max-width: 800px;
 
   @media (max-width: ${MOBILE}) {
     flex-direction: column;
