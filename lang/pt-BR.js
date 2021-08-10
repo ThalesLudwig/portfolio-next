@@ -101,4 +101,15 @@ export const PT_BR = {
   "about.news.two": "Trabalhando com NextJS!",
   "about.news.three": "Publicando novos designs no Dribbble.",
   "about.news.four": "Estudando Swift.",
+
+  "contact.social.instagram": "Caso você goste de fotografias pessoais.",
+  "contact.social.twitter": "Não espere muita coisa.",
+  "contact.social.github":
+    "Todos os meus projetos estão aqui, você realmente deveria dar uma olhada!",
+  "contact.social.linkedin":
+    "Meu currículo online, com todas as informações que precisa.",
+  "contact.social.dribbble": "É aqui que eu faço o upload de novos designs.",
+  "contact.social.coffee": "Caso você goste muito, muito do meu trabalho.",
+  "contact.social.facebook":
+    "Normalmente só para família e amigos, mas ei, vá em frente se quiser.",
 };

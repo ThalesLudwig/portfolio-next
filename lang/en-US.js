@@ -97,4 +97,15 @@ export const EN_US = {
   "about.news.two": "Working with NextJS!",
   "about.news.three": "Publishing new designs on Dribbble.",
   "about.news.four": "Studying Swift.",
+
+  "contact.social.instagram": "In case you like personal pictures.",
+  "contact.social.twitter": "Dont’t expect too much.",
+  "contact.social.github":
+    "All my projects are here, you should totally check it out!",
+  "contact.social.linkedin":
+    "My online resume, with all the information you need.",
+  "contact.social.dribbble": "Here is where I upload my new designs.",
+  "contact.social.coffee": "In case you really, really like my work.",
+  "contact.social.facebook":
+    "Usually just for friends and family, but hey, go ahead if you want.",
 };

@@ -22,6 +22,6 @@ export const Text = styled.div`
   font-size: ${({ theme }) => theme.sizes.subtitle};
   color: ${({ theme }) => theme.colors.text};
   margin-top: 20px;
-  text-align: justify;
-  text-justify: inter-word;
+  /* text-align: justify;
+  text-justify: inter-word; */
 `;
