@@ -127,4 +127,21 @@ export const PT_BR = {
 
   "about.hello": "Olá!",
   "about.name": "Sou Thales Ludwig.",
+
+  "projects.name.portfolio": "Meu portfólio. Você está aqui agora.",
+  "projects.name.coffegramWeb":
+    "Um projeto para demonstrar o uso do React e suas bibliotecas.",
+  "projects.name.paguei": "O código do app Paguei.",
+  "projects.name.pagueiApp":
+    "Um aplicativo simples de controle financeiro com React Native.",
+  "projects.name.coffegramMobile":
+    "O app mobile do Coffeegram. É um clone básico do Instagram.",
+  "projects.name.aiden":
+    "Artificial Intelligence Designed for Extensions in Node. É o bot à sua direita! 😄",
+  "projects.name.coffegramServer":
+    "O servidor do Coffeegram, app e web, com NodeJS.",
+  "projects.name.condofy":
+    "O produto novo no qual estou trabalhando, com Angular. O código é fechado.",
+  "projects.name.swapi":
+    "Um projeto para demonstrar o uso do VueJS e suas bibliotecas.",
 };

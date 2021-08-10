@@ -120,7 +120,23 @@ export const EN_US = {
   "education.school.course.development": "Development of Systems",
   "education.school.course.ux": "User Experience",
   "education.school.course.mobile": "Mobile Apps Development",
-
   "about.hello": "Hello!",
   "about.name": "I'm Thales Ludwig.",
+
+  "projects.name.portfolio": "My portfolio. You are here now.",
+  "projects.name.coffegramWeb":
+    "A project to show the use of React and its libraries.",
+  "projects.name.paguei": "The code for the Paguei app.",
+  "projects.name.pagueiApp":
+    "A simple financial control app with React Native.",
+  "projects.name.coffegramMobile":
+    "The mobile app for Coffeegram. It's a basic Instagram clone.",
+  "projects.name.aiden":
+    "Artificial Intelligence Designed for Extensions in Node. It's the bot to your right! 😄",
+  "projects.name.coffegramServer":
+    "The server for the Coffeegram app and web version, with NodeJS.",
+  "projects.name.condofy":
+    "The new product I'm working on, with Angular. The code is closed.",
+  "projects.name.swapi":
+    "A portfolio project to show the use of VueJS and its libraries.",
 };

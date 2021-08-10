@@ -34,4 +34,46 @@ export default defineMessages({
     defaultMessage:
       "My most recent projects. Some of them are purely academic to demonstrate the use of a certain technology.",
   },
+  projectPortfolio: {
+    id: "projects.name.portfolio",
+    defaultMessage: "My portfolio. You are here now.",
+  },
+  projectCoffegramWeb: {
+    id: "projects.name.coffegramWeb",
+    defaultMessage:
+      "A portfolio project to show the use of React and its libraries.",
+  },
+  projectPaguei: {
+    id: "projects.name.paguei",
+    defaultMessage: "The code for the Paguei app.",
+  },
+  projectPagueiApp: {
+    id: "projects.name.pagueiApp",
+    defaultMessage: "A simple financial control app with React Native.",
+  },
+  projectCoffegramMobile: {
+    id: "projects.name.coffegramMobile",
+    defaultMessage:
+      "The mobile app for Coffeegram. It's a basic Instagram clone.",
+  },
+  projectAiden: {
+    id: "projects.name.aiden",
+    defaultMessage:
+      "Artificial Intelligence Designed for Extensions in Node. It's the bot to your right! 😄",
+  },
+  projectCoffeegramServer: {
+    id: "projects.name.coffegramServer",
+    defaultMessage:
+      "The server for the Coffeegram app and web version, with NodeJS.",
+  },
+  projectCondofy: {
+    id: "projects.name.condofy",
+    defaultMessage:
+      "The new product I'm working on, with Angular. The code is closed.",
+  },
+  projectSwapi: {
+    id: "projects.name.swapi",
+    defaultMessage:
+      "A portfolio project to show the use of VueJS and its libraries.",
+  },
 });
