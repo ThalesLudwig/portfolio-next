@@ -18,7 +18,21 @@ function App({ Component, pageProps }) {
           <Head>
             <title>Thales Ludwig</title>
             <meta name="description" content="Thales' Portfolio" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/meta/icon.png" />
+            <meta property="og:image" content="/meta/thumb.jpg" />
+            <meta
+              property="og:image:alt"
+              content="Web developer and remote lifestyle enthusiast."
+            />
+            <meta property="og:title" content="Portfolio - Thales" />
+            <meta
+              property="og:description"
+              content="Thales Valentini's portfolio"
+            />
+            <meta
+              property="og:url"
+              content="https://thalesludwig.vercel.app/"
+            />
           </Head>
           <IntlProvider>
             <Content>
