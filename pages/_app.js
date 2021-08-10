@@ -19,20 +19,32 @@ function App({ Component, pageProps }) {
             <title>Thales Ludwig</title>
             <meta name="description" content="Thales' Portfolio" />
             <link rel="icon" href="/meta/icon.png" />
-            <meta name="twitter:card" content="summary" />
-            <meta property="og:title" content="Portfolio - Thales" />
+            <meta name="twitter:card" content="summary" key="twcard" />
+            <meta
+              property="og:title"
+              content="Portfolio - Thales"
+              key="ogtitle"
+            />
             <meta
               property="og:description"
               content="Thales Valentini's portfolio"
+              key="ogdescription"
             />
-            <meta property="og:image" content="/meta/thumb.jpg" />
+            <meta property="og:image" content="/meta/thumb.jpg" key="ogimage" />
+            <meta
+              property="og:image:type"
+              content="image/jpeg"
+              key="ogimagetype"
+            />
             <meta
               property="og:image:alt"
               content="Web developer and remote lifestyle enthusiast."
+              key="ogimagealt"
             />
             <meta
               property="og:url"
               content="https://thalesludwig.vercel.app/"
+              key="ogurl"
             />
           </Head>
           <IntlProvider>
