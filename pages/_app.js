@@ -19,15 +19,16 @@ function App({ Component, pageProps }) {
             <title>Thales Ludwig</title>
             <meta name="description" content="Thales' Portfolio" />
             <link rel="icon" href="/meta/icon.png" />
-            <meta property="og:image" content="/meta/thumb.jpg" />
-            <meta
-              property="og:image:alt"
-              content="Web developer and remote lifestyle enthusiast."
-            />
+            <meta name="twitter:card" content="summary" />
             <meta property="og:title" content="Portfolio - Thales" />
             <meta
               property="og:description"
               content="Thales Valentini's portfolio"
+            />
+            <meta property="og:image" content="/meta/thumb.jpg" />
+            <meta
+              property="og:image:alt"
+              content="Web developer and remote lifestyle enthusiast."
             />
             <meta
               property="og:url"
