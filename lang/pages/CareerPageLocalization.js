@@ -31,4 +31,24 @@ export default defineMessages({
     id: "career.hero",
     defaultMessage: "My professional journey until this point.",
   },
+  frontEndEngineer: {
+    id: "career.job.frontendEngineer",
+    defaultMessage: "Front-end Engineer",
+  },
+  seniorFullStack: {
+    id: "career.job.seniorFullStack",
+    defaultMessage: "Senior Full-stack Engineer",
+  },
+  devLead: {
+    id: "career.job.devLead",
+    defaultMessage: "Software Developer | Tech Leader",
+  },
+  developer: {
+    id: "career.job.developer",
+    defaultMessage: "Software Developer",
+  },
+  juniorDeveloper: {
+    id: "career.job.juniorDeveloper",
+    defaultMessage: "Junior Software Developer",
+  },
 });

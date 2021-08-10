@@ -144,4 +144,10 @@ export const PT_BR = {
     "O produto novo no qual estou trabalhando, com Angular. O código é fechado.",
   "projects.name.swapi":
     "Um projeto para demonstrar o uso do VueJS e suas bibliotecas.",
+
+  "career.job.frontendEngineer": "Engenheiro Front-end",
+  "career.job.seniorFullStack": "Engenheiro Full-stack Sênior",
+  "career.job.devLead": "Desenvolvedor de Software | Líder Técnico",
+  "career.job.developer": "Desenvolvedor de Software",
+  "career.job.juniorDeveloper": "Desenvolvedor de Software Júnior",
 };

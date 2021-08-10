@@ -139,4 +139,10 @@ export const EN_US = {
     "The new product I'm working on, with Angular. The code is closed.",
   "projects.name.swapi":
     "A portfolio project to show the use of VueJS and its libraries.",
+
+  "career.job.frontendEngineer": "Front-end Engineer",
+  "career.job.seniorFullStack": "Senior Full-stack Engineer",
+  "career.job.devLead": "Software Developer | Tech Leader",
+  "career.job.developer": "Software Developer",
+  "career.job.juniorDeveloper": "Junior Software Developer",
 };
