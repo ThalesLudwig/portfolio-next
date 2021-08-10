@@ -86,4 +86,15 @@ export const EN_US = {
   "projects.hero":
     "My most recent projects. Some of them are purely academic to demonstrate the use of a certain technology.",
   "skills.hero": "This is the list of what I can do.",
+  "about.hire": "Hire me.",
+
+  "about.card.one": "🚩 Currently located in the south of Brazil.",
+  "about.card.two": "🌎  Enthusiast of remote work lifestyle.",
+  "about.card.three": "🎮  Game lover!",
+
+  "about.news.happening": "What’s happening now",
+  "about.news.one": "Starting a new personal project with Angular.",
+  "about.news.two": "Working with NextJS!",
+  "about.news.three": "Publishing new designs on Dribbble.",
+  "about.news.four": "Studying Swift.",
 };

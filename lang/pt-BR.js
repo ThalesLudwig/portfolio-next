@@ -89,4 +89,16 @@ export const PT_BR = {
   "projects.hero":
     "Meus projetos mais recentes. Alguns deles são puramente acadêmicos para demonstrar o uso de uma determinada tecnologia.",
   "skills.hero": "Aqui está uma lista do que eu posso fazer.",
+
+  "about.hire": "Me contrate.",
+
+  "about.card.one": "🚩 Atualmente residindo no sul do Brasil.",
+  "about.card.two": "🌎  Entusiasta do estilo de vida remoto.",
+  "about.card.three": "🎮  Amante de jogos!",
+
+  "about.news.happening": "Últimos acontecimentos",
+  "about.news.one": "Começando um novo projeto pessoal com Angular.",
+  "about.news.two": "Trabalhando com NextJS!",
+  "about.news.three": "Publicando novos designs no Dribbble.",
+  "about.news.four": "Estudando Swift.",
 };
