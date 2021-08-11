@@ -52,8 +52,10 @@ function Footer({
           src="usa_flag.png"
           isActive={location === LANG_CONSTANTS.EN}
           onClick={() => {
-            clearMessages();
-            setEnglish();
+            if (location !== LANG_CONSTANTS.EN) {
+              clearMessages();
+              setEnglish();
+            }
           }}
         />
         <FlagImage
@@ -62,8 +64,10 @@ function Footer({
           src="brazil_flag.png"
           isActive={location === LANG_CONSTANTS.BR}
           onClick={() => {
-            clearMessages();
-            setPortuguese();
+            if (location !== LANG_CONSTANTS.BR) {
+              clearMessages();
+              setPortuguese();
+            }
           }}
         />
       </FlagWrapper>

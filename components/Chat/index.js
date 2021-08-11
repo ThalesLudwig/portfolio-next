@@ -77,7 +77,7 @@ function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
       }
     >
       <ScrollPanel ref={scrollPanelRef}>
-        {printMessages()}
+        {printMessages(messages)}
         {isLoading && <Message {...loadingMessage} />}
       </ScrollPanel>
       <Input>
