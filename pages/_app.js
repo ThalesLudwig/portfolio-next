@@ -11,63 +11,41 @@ import { Provider } from "react-redux";
 import IntlProvider from "../components/IntlProvider";
 
 function App({ Component, pageProps }) {
+  const description =
+    "Thales' Portfolio. Full-stack software engineer, UI/UX Designer, and remote lifestyle enthusiast. I am an always-learning machine that converts energy drinks into clean and scalable code.";
+  const title = "Thales Ludwig";
+  const image = "https://i.ibb.co/PgmvPZD/IMG-0246-2.jpg";
+
   return (
     <Provider store={store}>
       <PersistGate loading="Loading" persistor={persistor}>
         <ConnectedTheme>
           <Head>
-            <title>Thales Ludwig</title>
-            <meta name="description" content="Thales' Portfolio" />
-            <link rel="icon" href="/meta/icon.png" />
-            <meta
-              property="og:title"
-              content="Portfolio - Thales"
-              key="ogtitle"
-            />
-            <meta
-              property="og:description"
-              content="Thales Ludwig's portfolio"
-              key="ogdescription"
-            />
-            <meta property="og:image" content="/meta/thumb.jpg" key="ogimage" />
-            <meta
-              property="og:image:type"
-              content="image/jpeg"
-              key="ogimagetype"
-            />
-            <meta
-              property="og:image:alt"
-              content="Web developer and remote lifestyle enthusiast."
-              key="ogimagealt"
-            />
-            <meta
-              property="og:url"
-              content="https://thalesludwig.vercel.app/"
-              key="ogurl"
-            />
+            {/* HTML Meta Tags */}
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <meta charSet="utf-8" />
 
-            <meta itemprop="name" content="Thales Ludwig" key="propname" />
-            <meta
-              itemprop="description"
-              content="Thales Ludwig's portfolio"
-              key="propdesc"
-            />
-            <meta itemprop="image" content="/meta/thumb.jpg" key="propimage" />
+            {/* Google / Search Engine Tags */}
+            <meta itemprop="name" content={title} />
+            <meta itemprop="description" content={description} />
+            <meta itemprop="image" content={image} />
 
-            <meta name="twitter:card" content="summary" key="twcard" />
-            <meta name="twitter:title" content="Thales Ludwig" key="twtitle" />
-            <meta
-              name="twitter:description"
-              content="Thales Ludwig's portfolio"
-              key="twdescription"
-            />
-            <meta
-              name="twitter:image"
-              content="/meta/thumb.jpg"
-              key="twimage"
-            />
-            <meta name="image" content="/meta/thumb.jpg" key="nameimage" />
-            <meta name="og:image" content="/meta/thumb.jpg" key="nameogimage" />
+            {/* Facebook Meta Tags */}
+            <meta property="og:url" content="https://thalesludwig.vercel.app" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={image} />
+            <meta property="og:image:secure_url" content={image} />
+            <meta property="og:image:width" content="720" />
+            <meta property="og:image:height" content="690" />
+
+            {/* Twitter Meta Tags */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={image} />
           </Head>
           <IntlProvider>
             <Content>
