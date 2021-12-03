@@ -21,11 +21,12 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 23px;
+  flex-wrap: wrap;
 
   @media (max-width: ${MOBILE}) {
     width: 100vw;
     flex-wrap: nowrap;
-    overflow-y: auto;
+    overflow-x: auto;
     padding: 0px 20px;
 
     &::-webkit-scrollbar-track {

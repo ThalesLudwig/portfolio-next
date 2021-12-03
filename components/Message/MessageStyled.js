@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   margin: 2px 0px;
@@ -17,6 +18,7 @@ export const Avatar = styled.div`
   min-width: 42px;
   height: 42px;
   border-radius: 50%;
+  box-shadow: ${SHADOWS.default};
 `;
 
 export const TextArea = styled.div`
@@ -49,6 +51,7 @@ export const TextArea = styled.div`
     !hasAvatar && isPrimary ? "52px" : "10px"};
   margin-right: ${({ hasAvatar, isPrimary }) =>
     !hasAvatar && !isPrimary ? "52px" : "10px"};
+  box-shadow: ${SHADOWS.default};
 `;
 
 export const Image = styled.div`

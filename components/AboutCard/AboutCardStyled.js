@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   width: 223px;
   min-width: 223px;
   display: flex;
   flex-direction: column;
-  margin-right: 17px;
+  margin-right: 15px;
+  margin-top: 15px;
 `;
 
 export const ImageBackground = styled.div`
@@ -26,4 +28,5 @@ export const Title = styled.div`
   background-color: ${({ theme }) => theme.colors.card};
   border-radius: 0px 0px 10px 10px;
   cursor: default;
+  box-shadow: ${SHADOWS.default};
 `;

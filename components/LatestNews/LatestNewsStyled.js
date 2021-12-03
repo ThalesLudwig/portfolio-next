@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: ${SHADOWS.default};
 `;
 
 export const Icon = styled.img``;

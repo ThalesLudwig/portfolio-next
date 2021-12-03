@@ -9,6 +9,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   border-radius: 45px;
   cursor: pointer;
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.card};
   }

@@ -4,7 +4,7 @@ import { MOBILE } from "../../constants/screen";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 700px;
   margin: 20px 0px;
 
   @media (max-width: ${MOBILE}) {

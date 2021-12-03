@@ -1,62 +1,34 @@
 import styled from "styled-components";
 import { MOBILE } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
-  display: ${({ isChat }) => (isChat ? "none" : "flex")};
+  display: flex;
   flex-direction: column;
-
-  @media (max-width: ${MOBILE}) {
-    width: 100vw;
-    padding: 0px 20px;
-  }
+  position: fixed;
+  background-color: ${({ theme }) => theme.colors.card};
+  box-shadow: ${SHADOWS.default};
+  padding: 0px 20px;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
-export const NavigationWrapper = styled.div`
+export const FlagProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  &::-webkit-scrollbar-track {
-    display: none;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    display: none;
-  }
-
-  @media (max-width: ${MOBILE}) {
-    flex-wrap: nowrap;
-    overflow-y: auto;
-  }
-`;
-
-export const Tab = styled.div`
-  padding: 5px 5px 2px 5px;
-  min-width: max-content;
-  cursor: pointer;
-  color: ${({ theme, isActive }) =>
-    isActive ? theme.colors.activeTab : theme.colors.text};
-  font-size: ${({ theme }) => theme.sizes.subtitle};
-  border-bottom: ${({ theme, isActive }) =>
-    `2px ${isActive ? theme.colors.activeTab : theme.colors.background} solid`};
-
-  &:hover {
-    color: ${({ theme, isActive }) =>
-      isActive ? theme.colors.primary : theme.colors.primaryAlt};
-    border-bottom: ${({ theme, isActive }) =>
-      `2px ${isActive ? theme.colors.primary : theme.colors.primaryAlt} solid`};
-  }
+  align-items: center;
+  width: 100%;
+  max-width: 1250px;
+  align-self: center;
 `;
 
 export const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 35px;
+  margin: 15px 0;
 `;
 
 export const NameTitleWrapper = styled.div`
@@ -67,7 +39,7 @@ export const NameTitleWrapper = styled.div`
 `;
 
 export const Name = styled.div`
-  font-size: ${({ theme }) => theme.sizes.title};
+  font-size: ${({ theme }) => theme.sizes.subtitle};
   color: ${({ theme }) => theme.colors.title};
 
   @media (max-width: ${MOBILE}) {
@@ -76,7 +48,7 @@ export const Name = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: ${({ theme }) => theme.sizes.subtitle};
+  font-size: ${({ theme }) => theme.sizes.text};
   color: ${({ theme }) => theme.colors.text};
 `;
 
@@ -91,12 +63,6 @@ export const FlagImage = styled.img`
     ${({ theme, isActive }) =>
       isActive ? theme.colors.title : theme.colors.background};
   margin-left: 5px;
-`;
-
-export const FlagProfileWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 `;
 
 export const FlagWrapper = styled.div`

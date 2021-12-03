@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MOBILE } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   width: 380px;
@@ -13,9 +14,11 @@ export const Container = styled.div`
   border-radius: 20px;
   padding: 8px;
   justify-content: space-between;
+  box-shadow: ${SHADOWS.default};
 
   @media (max-width: ${MOBILE}) {
     width: 100vw;
+    max-width: 100vw;
     margin-right: 0px;
     margin-bottom: 10px;
     border-radius: 0px;

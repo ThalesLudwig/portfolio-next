@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MOBILE } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   width: 300px;
@@ -43,6 +44,7 @@ export const Title = styled.div`
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.card};
   border-radius: 0px 0px 10px 10px;
+  box-shadow: ${SHADOWS.default};
 
   @media (max-width: ${MOBILE}) {
     border-radius: 0px;

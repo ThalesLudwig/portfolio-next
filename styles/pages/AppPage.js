@@ -4,10 +4,11 @@ import { MOBILE } from "../../constants/screen";
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  margin-top: 40px;
 
   @media (min-width: ${MOBILE}) {
     padding: 0px 20px;
+    justify-content: center;
   }
 `;
 
@@ -15,7 +16,9 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 80px);
+  max-width: 750px;
+
   &::-webkit-scrollbar-track {
     display: none;
   }
@@ -24,5 +27,9 @@ export const Main = styled.div`
   }
   &::-webkit-scrollbar-thumb {
     display: none;
+  }
+
+  @media (max-width: ${MOBILE}) {
+    margin-top: 60px;
   }
 `;

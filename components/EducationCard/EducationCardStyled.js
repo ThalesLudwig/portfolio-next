@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.card};
   font-size: ${({ theme }) => theme.sizes.text};
   border-radius: 0px 0px 20px 20px;
+  box-shadow: ${SHADOWS.default};
 `;
 
 export const ContentWrapper = styled.div`

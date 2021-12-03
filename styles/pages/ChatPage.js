@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { TABLET } from "../../constants/screen";
 
 export const Container = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 125px);
   width: 100vw;
 `;
 
@@ -16,6 +14,10 @@ export const Input = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 export const NativeInput = styled.input`
@@ -40,9 +42,10 @@ export const ScrollPanel = styled.div`
   flex-direction: column;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: 100vh;
+  height: calc(100vh - 210px);
   overflow-y: auto;
   padding: 0px 15px;
+  position: fixed;
 
   &::-webkit-scrollbar {
     display: none;

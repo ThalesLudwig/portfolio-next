@@ -43,10 +43,6 @@ export default function Home() {
       </CardWrapper>
       <HappeningNow>{formatMessage(localization.happeningNow)}</HappeningNow>
       <News>
-        <LatestNews icon="icons/puzzle.svg">
-          {formatMessage(localization.latestNewsOne)}
-        </LatestNews>
-        <NewsLine />
         <LatestNews icon="icons/code.svg">
           {formatMessage(localization.latestNewsTwo)}
         </LatestNews>

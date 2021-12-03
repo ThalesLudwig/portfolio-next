@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MOBILE } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
   width: 320px;
@@ -44,6 +45,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  box-shadow: ${SHADOWS.default};
 
   @media (max-width: ${MOBILE}) {
     border-radius: 0px;

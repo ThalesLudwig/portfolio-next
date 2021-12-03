@@ -36,7 +36,7 @@ function Skills({ addMessage, setIsLoading, messages }) {
 
   return (
     <Content>
-      <PageHeader title={`${formatMessage(localization.title)} 🛠️`}>
+      <PageHeader title={formatMessage(localization.title)}>
         {formatMessage(localization.header)}
       </PageHeader>
       <SkillListWrapper>
@@ -45,12 +45,11 @@ function Skills({ addMessage, setIsLoading, messages }) {
           <Skill label="React" />
           <Skill label="Redux" progress={95} />
           <Skill label="React Native" progress={90} />
-          <Skill label="Node" progress={85} />
+          <Skill label="Typescript" progress={85} />
+          <Skill label="Node" progress={80} />
           <Skill label="Angular" progress={80} />
-          <Skill label="Typescript" progress={75} />
-          <Skill label="Vue" progress={70} />
-          <Skill label="Swift" progress={20} />
-          <Skill label="Kotlin" progress={15} />
+          <Skill label="Vue" progress={65} />
+          <Skill label="Flutter" progress={20} />
         </SkillList>
         <SkillList>
           <Skill label="HTML" isAlt />

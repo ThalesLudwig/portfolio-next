@@ -76,7 +76,7 @@ export const PT_BR = {
   "chat.skills.about": "Sobre minhas habilidades... 🛠️",
 
   "about.hero":
-    "Sou engenheiro de software, UI/UX Designer, e entusiasta de lifestyle remoto. Eu sou uma máquina de aprendizado que converte energéticos em código limpo e escalável.",
+    "Engenheiro de software, UI/UX Designer, e entusiasta de lifestyle remoto. Eu sou uma máquina de aprendizado que converte energéticos em código limpo e escalável.",
   "articles.hero":
     "Eu gosto de escrever sobre carreira e a vida em geral quando tenho tempo, mas também estou planejando escrever sobre assuntos mais técnicos.",
   "career.hero": "Minha jornada profissional até este momento.",
@@ -100,7 +100,7 @@ export const PT_BR = {
   "about.news.one": "Começando um novo projeto pessoal com Angular.",
   "about.news.two": "Trabalhando com NextJS!",
   "about.news.three": "Publicando novos designs no Dribbble.",
-  "about.news.four": "Estudando Swift.",
+  "about.news.four": "Estudando Flutter.",
 
   "contact.social.instagram": "Caso você goste de fotografias pessoais.",
   "contact.social.twitter": "Não espere muita coisa.",
@@ -150,4 +150,8 @@ export const PT_BR = {
   "career.job.devLead": "Desenvolvedor de Software | Líder Técnico",
   "career.job.developer": "Desenvolvedor de Software",
   "career.job.juniorDeveloper": "Desenvolvedor de Software Júnior",
+
+  "settings.theme": "Alternar tema de cores",
+  "settings.language": "Escolher idioma",
+  "settings.title": "Ajustes",
 };

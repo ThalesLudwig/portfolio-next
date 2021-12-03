@@ -1,25 +1,20 @@
 import { connect } from "react-redux";
-import { useRouter } from "next/router";
-import { setDarkTheme, setLightTheme } from "../../config/themeSlice";
-import { setEnglish, setPortuguese } from "../../config/locationSlice";
-import LANG_CONSTANTS from "../../constants/lang";
-import localization from "./localization";
+import { setDarkTheme, setLightTheme } from "../config/themeSlice";
+import { setEnglish, setPortuguese } from "../config/locationSlice";
+import { clearMessages } from "../config/messagesSlice";
+import LANG_CONSTANTS from "../constants/lang";
+import localization from "../lang/pages/SettingsPageLocalization";
 import { useIntl } from "react-intl";
-import { clearMessages } from "../../config/messagesSlice";
+import PageHeader from "../components/PageHeader";
 import {
-  Container,
-  ProfileImage,
-  ProfileWrapper,
-  NameTitleWrapper,
-  Name,
-  Title,
-  FlagImage,
-  FlagWrapper,
-  FlagProfileWrapper,
+  Content,
   ThemeSwitcher,
-} from "./HeaderStyled";
+  FlagImage,
+  Label,
+  FlagRow,
+} from "../styles/pages/SettingsPage";
 
-function Header({
+function Settings({
   theme,
   location,
   setDarkTheme,
@@ -28,23 +23,18 @@ function Header({
   setPortuguese,
   clearMessages,
 }) {
-  const router = useRouter();
   const { formatMessage } = useIntl();
 
   return (
-    <Container isChat={router.asPath === "/chat"}>
-      <FlagProfileWrapper>
-        <ProfileWrapper>
-          <ProfileImage width={50} height={50} src="profile_crop.jpg" />
-          <NameTitleWrapper>
-            <Name>Thales Ludwig Valentini</Name>
-            <Title>{formatMessage(localization.jobTitle)}</Title>
-          </NameTitleWrapper>
-        </ProfileWrapper>
-        <FlagWrapper>
-          <ThemeSwitcher
-            onClick={() => (!!theme ? setDarkTheme() : setLightTheme())}
-          />
+    <>
+      <PageHeader title={formatMessage(localization.title)} />
+      <Content>
+        <Label>{formatMessage(localization.switchTheme)}</Label>
+        <ThemeSwitcher
+          onClick={() => (!!theme ? setDarkTheme() : setLightTheme())}
+        />
+        <Label>{formatMessage(localization.switchLang)}</Label>
+        <FlagRow>
           <FlagImage
             width={50}
             height={35}
@@ -69,9 +59,9 @@ function Header({
               }
             }}
           />
-        </FlagWrapper>
-      </FlagProfileWrapper>
-    </Container>
+        </FlagRow>
+      </Content>
+    </>
   );
 }
 
@@ -90,4 +80,4 @@ const mapDispatchToProps = {
   clearMessages,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

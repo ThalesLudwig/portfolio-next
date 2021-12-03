@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Chat from "../components/Chat";
 import { Content, Main } from "../styles/pages/AppPage";
 import ConnectedTheme from "../components/ConnectedTheme";
@@ -9,9 +8,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "../config/store";
 import { Provider } from "react-redux";
 import IntlProvider from "../components/IntlProvider";
+import Sidenav from "../components/Sidenav";
 
 const MainProvider = ({ children }) => {
-  console.log("process.browser", process.browser);
   return process.browser ? (
     <Provider store={store}>
       <PersistGate loading="Loading" persistor={persistor}>
@@ -61,10 +60,10 @@ function App({ Component, pageProps }) {
         </Head>
         <IntlProvider>
           <Content>
+            <Header />
+            <Sidenav />
             <Main>
-              <Header />
               <Component {...pageProps} />
-              <Footer />
             </Main>
             <Chat />
           </Content>

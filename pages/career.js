@@ -40,7 +40,7 @@ function Career({ addMessage, setIsLoading, messages }) {
 
   return (
     <Content>
-      <PageHeader title={`${formatMessage(localization.title)} 💼`}>
+      <PageHeader title={formatMessage(localization.title)}>
         {formatMessage(localization.header)}
       </PageHeader>
       <Timeline>

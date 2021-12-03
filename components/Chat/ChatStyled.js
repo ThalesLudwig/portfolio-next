@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { TABLET } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.form`
   display: ${({ isChatPage }) => (isChatPage ? "none" : "flex")};
@@ -7,8 +8,8 @@ export const Container = styled.form`
   justify-content: space-between;
   height: calc(100vh - 80px);
   border-left: 1px solid ${({ theme }) => theme.colors.divisor};
-  margin-left: 30px;
-  width: 500px;
+  margin-left: 20px;
+  width: 405px;
   padding: 0px 30px;
 
   @media (max-width: ${TABLET}) {
@@ -23,7 +24,9 @@ export const Input = styled.div`
   border-radius: 12px;
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-shadow: ${SHADOWS.default};
 `;
 
 export const NativeInput = styled.input`
@@ -50,6 +53,7 @@ export const ScrollPanel = styled.div`
   scrollbar-width: none;
   height: 100vh;
   overflow-y: auto;
+  padding-top: 10px;
 
   &::-webkit-scrollbar {
     display: none;
