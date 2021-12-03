@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
+import { MOBILE, MINI } from "../../constants/screen";
 import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
@@ -36,6 +36,10 @@ export const NameTitleWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-left: 20px;
+
+  @media (max-width: ${MINI}) {
+    margin-left: 10px;
+  }
 `;
 
 export const Name = styled.div`
@@ -45,11 +49,19 @@ export const Name = styled.div`
   @media (max-width: ${MOBILE}) {
     font-size: ${({ theme }) => theme.sizes.subtitle};
   }
+
+  @media (max-width: ${MINI}) {
+    font-size: ${({ theme }) => theme.sizes.text};
+  }
 `;
 
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.sizes.text};
   color: ${({ theme }) => theme.colors.text};
+
+  @media (max-width: ${MOBILE}) {
+    font-size: ${({ theme }) => theme.sizes.textSmall};
+  }
 `;
 
 export const ProfileImage = styled.img`

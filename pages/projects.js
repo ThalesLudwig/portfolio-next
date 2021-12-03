@@ -45,6 +45,14 @@ function Projects({ addMessage, setIsLoading, messages }) {
         <Title>React</Title>
         <ProjectRow>
           <ProjectCard
+            pills={["React", "Redux", "Styled-Components"]}
+            title="Condofy"
+            url="https://github.com/ThalesLudwig/condofy-web-react"
+          >
+            {formatMessage(localization.projectCondofy)}
+          </ProjectCard>
+
+          <ProjectCard
             pills={["React", "NextJS", "Redux"]}
             title="portfolio-next"
             url="https://github.com/ThalesLudwig/portfolio-next"
@@ -103,7 +111,7 @@ function Projects({ addMessage, setIsLoading, messages }) {
             {formatMessage(localization.projectCoffeegramServer)}
           </ProjectCard>
         </ProjectRow>
-        <Title>Angular</Title>
+        {/* <Title>Angular</Title>
         <ProjectRow>
           <ProjectCard
             pills={["Angular", "i18n", "Ng Universal"]}
@@ -113,7 +121,7 @@ function Projects({ addMessage, setIsLoading, messages }) {
           >
             {formatMessage(localization.projectCondofy)}
           </ProjectCard>
-        </ProjectRow>
+        </ProjectRow> */}
         <Title>Vue</Title>
         <ProjectRow>
           <ProjectCard

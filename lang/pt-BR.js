@@ -141,7 +141,7 @@ export const PT_BR = {
   "projects.name.coffegramServer":
     "O servidor do Coffeegram, app e web, com NodeJS.",
   "projects.name.condofy":
-    "O produto novo no qual estou trabalhando, com Angular. O código é fechado.",
+    "O produto novo no qual estou trabalhando. Está em andamento.",
   "projects.name.swapi":
     "Um projeto para demonstrar o uso do VueJS e suas bibliotecas.",
 

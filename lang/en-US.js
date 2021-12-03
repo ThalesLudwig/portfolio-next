@@ -136,7 +136,7 @@ export const EN_US = {
   "projects.name.coffegramServer":
     "The server for the Coffeegram app and web version, with NodeJS.",
   "projects.name.condofy":
-    "The new product I'm working on, with Angular. The code is closed.",
+    "The new product I'm working on. It's a work in progress.",
   "projects.name.swapi":
     "A portfolio project to show the use of VueJS and its libraries.",
 
