@@ -8,12 +8,14 @@ export const PT_BR = {
   "header.tabs.contact": "Contato",
   "header.tabs.designs": "Designs",
   "header.job": "Engenheiro de Software | Designer",
+  "header.settings": "Ajustes",
+  "header.bot": "Simular Entrevista",
   "footer.talk": "Fale com eu-bot!",
   "footer.back": "Voltar",
   "chat.input": "Pressione Enter para enviar",
   "chat.greeting.first": "Oi, bem-vindo ao meu portfólio! 😄",
   "chat.greeting.second": "Você está falando com uma versão automática de mim.",
-  "chat.greeting.third": "Sinta-se à vontade para me perguntar algo!",
+  "chat.greeting.third": "Nós podemos simular uma entrevista aqui!",
 
   "career.greeting.first":
     "Aqui você pode ver minhas experiências relevantes. 💼",

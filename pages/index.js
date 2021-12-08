@@ -11,6 +11,7 @@ import {
   HappeningNow,
   News,
   NewsLine,
+  ProfileImage,
 } from "../styles/pages/AboutPage";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <Content>
+      <ProfileImage width={120} height={120} src="profile_crop.jpg" />
       <PageHeader
         title={formatMessage(localization.hello)}
         subtitle={`${formatMessage(localization.name)} 👋`}

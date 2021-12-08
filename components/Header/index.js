@@ -35,7 +35,6 @@ function Header({
     <Container isChat={router.asPath === "/chat"}>
       <FlagProfileWrapper>
         <ProfileWrapper>
-          <ProfileImage width={50} height={50} src="profile_crop.jpg" />
           <NameTitleWrapper>
             <Name>Thales Ludwig Valentini</Name>
             <Title>{formatMessage(localization.jobTitle)}</Title>

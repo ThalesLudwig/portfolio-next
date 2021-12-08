@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Avatar = styled.div`
   background: ${({ theme }) => theme.colors.messageBackground};
   background-image: ${({ isPrimary }) =>
-    isPrimary ? `url('profile_anim.jpg')` : `url('avatar.jpeg')`};
+    isPrimary ? `url('profile_anim.png')` : `url('avatar.jpeg')`};
   background-repeat: no-repeat;
   background-size: cover;
   width: 42px;

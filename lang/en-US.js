@@ -8,12 +8,14 @@ export const EN_US = {
   "header.tabs.contact": "Contact",
   "header.tabs.designs": "Designs",
   "header.job": "Software Engineer | Designer",
+  "header.settings": "Settings",
+  "header.bot": "Simulate Interview",
   "footer.talk": "Talk to bot-me!",
   "footer.back": "Go back",
   "chat.input": "Press Enter to send",
   "chat.greeting.first": "Hi, welcome to my portfolio! 😄",
   "chat.greeting.second": "You're talking to an automated version of me.",
-  "chat.greeting.third": "Feel free to ask me anything!",
+  "chat.greeting.third": "We can simulate an interview here!",
 
   "career.greeting.first":
     "Here you have all my relevant professional experiences. 💼",

@@ -37,4 +37,12 @@ export default defineMessages({
     id: "header.job",
     defaultMessage: "About me",
   },
+  settings: {
+    id: "header.settings",
+    defaultMessage: "Settings",
+  },
+  bot: {
+    id: "header.bot",
+    defaultMessage: "Simulate Interview",
+  },
 });

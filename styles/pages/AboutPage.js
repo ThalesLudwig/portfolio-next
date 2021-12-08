@@ -1,9 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
 import { MOBILE } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
+
+const fadeInAnimation = keyframes`${fadeIn}`;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  animation: 1s ${fadeInAnimation};
+`;
+
+export const ProfileImage = styled.img`
+  margin-top: 15px;
+  border-radius: 50%;
+  box-shadow: ${SHADOWS.default};
 `;
 
 export const HireMe = styled.div`

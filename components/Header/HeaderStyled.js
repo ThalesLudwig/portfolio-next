@@ -20,7 +20,7 @@ export const FlagProfileWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1250px;
+  max-width: 1300px;
   align-self: center;
 `;
 
@@ -36,6 +36,10 @@ export const NameTitleWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-left: 20px;
+
+  @media (min-width: ${MOBILE}) {
+    margin-left: 0;
+  }
 
   @media (max-width: ${MINI}) {
     margin-left: 10px;

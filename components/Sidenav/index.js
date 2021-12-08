@@ -56,10 +56,14 @@ export default function Sidenav() {
       </Link>
       <MobileOnly>
         <Link href="/chat">
-          <Tab isActive={isActiveRoute("/chat")}>🤖</Tab>
+          <Tab isActive={isActiveRoute("/chat")}>
+            🤖 <Text>{formatMessage(localization.bot)}</Text>
+          </Tab>
         </Link>
         <Link href="/settings">
-          <Tab isActive={isActiveRoute("/settings")}>⚙️</Tab>
+          <Tab isActive={isActiveRoute("/settings")}>
+            ⚙️ <Text>{formatMessage(localization.settings)}</Text>
+          </Tab>
         </Link>
       </MobileOnly>
     </Content>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
+import { MOBILE, TABLET } from "../../constants/screen";
 import { SHADOWS } from "../../constants/shadow";
 
 export const Content = styled.div`
@@ -33,8 +33,13 @@ export const Text = styled.span`
 export const MobileOnly = styled.span`
   display: none;
 
+  @media (max-width: ${TABLET}) {
+    display: flex;
+    flex-direction: column;
+  }
   @media (max-width: ${MOBILE}) {
     display: flex;
+    flex-direction: row;
   }
 `;
 

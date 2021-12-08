@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MOBILE } from "../../constants/screen";
 
 export const Container = styled.form`
   display: flex;
@@ -49,5 +50,9 @@ export const ScrollPanel = styled.div`
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media (min-width: ${MOBILE}) {
+    height: calc(100vh - 145px);
   }
 `;
