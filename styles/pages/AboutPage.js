@@ -12,9 +12,13 @@ export const Content = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  margin-top: 15px;
+  margin-top: 20px;
   border-radius: 50%;
   box-shadow: ${SHADOWS.default};
+
+  @media (max-width: ${MOBILE}) {
+    margin-left: 20px;
+  }
 `;
 
 export const HireMe = styled.div`
