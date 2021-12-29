@@ -20,6 +20,12 @@ export const Container = styled.div`
     margin: 0px;
     border-radius: 0px;
   }
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+  }
 `;
 
 export const Header = styled.div`

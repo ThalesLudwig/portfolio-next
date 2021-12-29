@@ -26,6 +26,12 @@ export const Container = styled.div`
     justify-content: center;
     width: 100vw;
   }
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+  }
 `;
 
 export const Logo = styled.div`

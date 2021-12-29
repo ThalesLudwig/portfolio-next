@@ -18,6 +18,12 @@ export const Container = styled.div`
     width: 320px;
   }
 
+  &:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+  }
+
   @media (max-width: ${MOBILE}) {
     width: 100vw;
     max-width: 100vw;
