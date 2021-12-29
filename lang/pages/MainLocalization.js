@@ -24,7 +24,7 @@ export default defineMessages({
   },
   cardThree: {
     id: "about.card.three",
-    defaultMessage: "🎮  Game lover!",
+    defaultMessage: "🎮  Game development student!",
   },
   happeningNow: {
     id: "about.news.happening",

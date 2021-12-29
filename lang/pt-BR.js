@@ -93,12 +93,12 @@ export const PT_BR = {
   "skills.hero":
     "Aqui está uma lista do que eu normalmente faço, mas eu sempre aceito um desafio!",
 
-  "about.hire": "Me contrate",
+  "about.hire": "Fale comigo",
   "about.simulate": "Simular entrevista",
 
   "about.card.one": "🚩 Atualmente residindo no sul do Brasil.",
   "about.card.two": "🌎  Entusiasta do estilo de vida remoto.",
-  "about.card.three": "🎮  Amante de jogos!",
+  "about.card.three": "🎮  Estudante de desenvolvimento de jogos!",
 
   "about.news.happening": "Últimos acontecimentos",
   "about.news.one": "Começando um novo projeto pessoal com Angular.",
@@ -163,4 +163,16 @@ export const PT_BR = {
 
   "theme.dark": "Modo Escuro",
   "theme.light": "Modo Claro",
+
+  "modal.games.title": "Eu sou Gamer",
+  "modal.games.text": "E um estudante de desenvolvimento de jogos.",
+  "modal.games.favorites": "Aqui estão alguns dos meus favoritos:",
+
+  "modal.remote.title": "Eu sou um entusiasta do estilo de vida remoto",
+  "modal.remote.text":
+    "Aqui estão os últimos lugares que minha esposa e eu visitamos:",
+
+  "modal.personal.title": "Eu moro no Brasil",
+  "modal.personal.subtitle": "Com minha esposa, Camila, e minha gatinha",
+  "modal.personal.text": "Me conheça um pouco melhor:",
 };
