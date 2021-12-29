@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
+import { MOBILE, TABLET } from "../../constants/screen";
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${MOBILE}) {
+  @media (max-width: ${TABLET}) {
     flex-direction: column;
     margin-bottom: 10px;
     align-items: flex-start;
@@ -21,13 +21,14 @@ export const Label = styled.div`
 `;
 
 export const ProgressBackground = styled.div`
-  width: 223px;
+  width: 100%;
+  max-width: 400px;
   height: 18px;
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.divisor};
 
   @media (max-width: ${MOBILE}) {
-    width: calc(100vw - 40px);
+    max-width: unset;
   }
 `;
 

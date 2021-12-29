@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SHADOWS } from "../../constants/shadow";
+import { MOBILE, TABLET } from "../../constants/screen";
 
 export const Container = styled.div`
   width: 223px;
@@ -8,6 +9,15 @@ export const Container = styled.div`
   flex-direction: column;
   margin-right: 15px;
   margin-top: 15px;
+
+  @media (max-width: ${TABLET}) {
+    margin: 0 0 15px 0;
+  }
+
+  @media (max-width: ${MOBILE}) {
+    margin-right: 15px;
+    margin-top: 15px;
+  }
 `;
 
 export const ImageBackground = styled.div`

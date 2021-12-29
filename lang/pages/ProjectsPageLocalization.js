@@ -68,7 +68,7 @@ export default defineMessages({
   },
   projectCondofy: {
     id: "projects.name.condofy",
-    defaultMessage: "The new product I'm working on. It's a work in progress.",
+    defaultMessage: "The new project I'm working on. It's a work in progress.",
   },
   projectSwapi: {
     id: "projects.name.swapi",

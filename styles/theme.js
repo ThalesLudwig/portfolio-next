@@ -1,6 +1,6 @@
 const sizes = {
-  title: "28px",
-  subtitle: "18px",
+  title: "20px",
+  subtitle: "16px",
   text: "14px",
   textSmall: "12px",
 };
@@ -12,7 +12,7 @@ export const light = {
     secondary: "#EBD26D",
     secondaryAlt: "#c2ad5b",
     card: "#F9FAFF",
-    background: "#FFFFFF",
+    background: "#f2f2f2",
     title: "#222126",
     text: "#8B8DB1",
     divisor: "#ECECEC",

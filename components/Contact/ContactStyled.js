@@ -1,20 +1,30 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
+import { MOBILE, TABLET } from "../../constants/screen";
+import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: ${({ theme }) => theme.colors.background};
-  border-radius: 45px;
+  background-color: ${({ theme }) => theme.colors.card};
+  border-radius: 10px;
   cursor: pointer;
+  width: 210px;
+  height: 225px;
+  box-shadow: ${SHADOWS.default};
+  padding: 15px;
+  text-align: center;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.card};
+  @media (max-width: ${TABLET}) {
+    margin: 10px;
+    width: 170px;
   }
+
   @media (max-width: ${MOBILE}) {
-    border-radius: 0px;
+    margin: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
   }
 `;
 
@@ -28,11 +38,13 @@ export const Logo = styled.div`
   width: 50px;
   min-width: 50px;
   border-radius: 50%;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.div`
   font-size: ${({ theme }) => theme.sizes.subtitle};
   color: ${({ theme }) => theme.colors.title};
+  margin-bottom: 10px;
 `;
 
 export const Text = styled.div`
@@ -42,7 +54,7 @@ export const Text = styled.div`
 
 export const LogoContentWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 `;
 
@@ -50,10 +62,4 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
-`;
-
-export const Chevron = styled.img.attrs({
-  src: "icons/chevron.svg",
-})`
-  color: ${({ theme }) => theme.colors.text};
 `;

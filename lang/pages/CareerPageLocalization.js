@@ -49,6 +49,6 @@ export default defineMessages({
   },
   juniorDeveloper: {
     id: "career.job.juniorDeveloper",
-    defaultMessage: "Junior Software Developer",
+    defaultMessage: "Software Developer",
   },
 });

@@ -3,7 +3,7 @@ import { defineMessages } from "react-intl";
 export default defineMessages({
   input: {
     id: "chat.input",
-    defaultMessage: "Press Enter to send",
+    defaultMessage: "Send message",
   },
   firstGreeting: {
     id: "chat.greeting.first",

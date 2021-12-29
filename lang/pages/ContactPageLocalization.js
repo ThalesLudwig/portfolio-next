@@ -36,16 +36,15 @@ export default defineMessages({
   },
   github: {
     id: "contact.social.github",
-    defaultMessage:
-      "All my projects are here, you should totally check it out!",
+    defaultMessage: "All my cool projects are here, check it out!",
   },
   linkedin: {
     id: "contact.social.linkedin",
-    defaultMessage: "My online resume, with all the information you need.",
+    defaultMessage: "My online resume, with all that basic information.",
   },
   dribbble: {
     id: "contact.social.dribbble",
-    defaultMessage: "Here is where I upload my new designs.",
+    defaultMessage: "Here is where I like to pretend to be a designer.",
   },
   coffee: {
     id: "contact.social.coffee",
@@ -58,6 +57,6 @@ export default defineMessages({
   },
   medium: {
     id: "contact.social.medium",
-    defaultMessage: "Where I publish my texts. When I have the time.",
+    defaultMessage: "I like to write about stuff... When I have the time.",
   },
 });

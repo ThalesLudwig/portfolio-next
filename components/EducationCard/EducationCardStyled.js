@@ -1,25 +1,17 @@
 import styled from "styled-components";
 import { SHADOWS } from "../../constants/shadow";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 410px;
-  width: 210px;
-  min-width: 210px;
-  margin-right: 10px;
-  cursor: default;
-`;
-
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  height: 356px;
+  height: 260px;
   background-color: ${({ theme }) => theme.colors.card};
   font-size: ${({ theme }) => theme.sizes.text};
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 10px;
   box-shadow: ${SHADOWS.default};
+  width: 100%;
+  min-width: 210px;
+  margin-right: 10px;
 `;
 
 export const ContentWrapper = styled.div`
@@ -29,12 +21,12 @@ export const ContentWrapper = styled.div`
 export const ImageBackground = styled.div`
   background-image: ${({ src }) => `url(${src})`};
   background-color: ${({ theme }) => theme.colors.card};
-  height: 247px;
-  width: 210px;
+  height: 180px;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
 `;
 
 export const Title = styled.div`
@@ -94,7 +86,7 @@ export const StatusWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 `;
 
 export const StatusIcon = styled.img`

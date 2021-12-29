@@ -4,11 +4,15 @@ export default defineMessages({
   header: {
     id: "about.hero",
     defaultMessage:
-      "Full-stack software engineer, UI/UX Designer, and remote lifestyle enthusiast. I am an always-learning machine that converts energy drinks into clean and scalable code.",
+      "Full-stack software engineer, UI/UX Designer. I am an always-learning machine that converts energy drinks into clean and scalable code.",
   },
   hireMe: {
     id: "about.hire",
-    defaultMessage: "Hire me.",
+    defaultMessage: "Hire me",
+  },
+  simulate: {
+    id: "footer.talk",
+    defaultMessage: "Talk to bot-me!",
   },
   cardOne: {
     id: "about.card.one",
@@ -30,18 +34,6 @@ export default defineMessages({
     id: "about.news.one",
     defaultMessage: "Starting a new personal project with Angular.",
   },
-  latestNewsTwo: {
-    id: "about.news.two",
-    defaultMessage: "Working with NextJS!",
-  },
-  latestNewsThree: {
-    id: "about.news.three",
-    defaultMessage: "Publishing new designs on Dribbble.",
-  },
-  latestNewsFour: {
-    id: "about.news.four",
-    defaultMessage: "Studying Flutter.",
-  },
   hello: {
     id: "about.hello",
     defaultMessage: "Hello!",
@@ -49,5 +41,13 @@ export default defineMessages({
   name: {
     id: "about.name",
     defaultMessage: "I'm Thales Ludwig.",
+  },
+  darkMode: {
+    id: "theme.dark",
+    defaultMessage: "Dark Mode",
+  },
+  lightMode: {
+    id: "theme.light",
+    defaultMessage: "Light Mode",
   },
 });

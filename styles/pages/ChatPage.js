@@ -43,16 +43,12 @@ export const ScrollPanel = styled.div`
   flex-direction: column;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  height: calc(100vh - 210px);
+  height: calc(100vh - 150px);
   overflow-y: auto;
   padding: 0px 15px;
-  position: fixed;
+  width: 100%;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  @media (min-width: ${MOBILE}) {
-    height: calc(100vh - 145px);
   }
 `;

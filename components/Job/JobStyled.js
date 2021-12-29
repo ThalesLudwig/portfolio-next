@@ -3,14 +3,13 @@ import { MOBILE } from "../../constants/screen";
 import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
-  width: 450px;
-  max-width: 450px;
+  width: 100%;
   height: 120px;
   display: flex;
   flex-direction: column;
   margin-right: 17px;
   background-color: ${({ theme }) => theme.colors.card};
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 8px;
   justify-content: space-between;
   box-shadow: ${SHADOWS.default};

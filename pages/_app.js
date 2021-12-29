@@ -1,14 +1,12 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import Header from "../components/Header";
-import Chat from "../components/Chat";
-import { Content, Main } from "../styles/pages/AppPage";
+import { Content } from "../styles/pages/AppPage";
 import ConnectedTheme from "../components/ConnectedTheme";
 import { PersistGate } from "redux-persist/integration/react";
 import store, { persistor } from "../config/store";
 import { Provider } from "react-redux";
 import IntlProvider from "../components/IntlProvider";
-import Sidenav from "../components/Sidenav";
 
 const MainProvider = ({ children }) => {
   return process.browser ? (
@@ -24,7 +22,7 @@ const MainProvider = ({ children }) => {
 
 function App({ Component, pageProps }) {
   const description =
-    "Thales' Portfolio. Full-stack software engineer, UI/UX Designer, and remote lifestyle enthusiast. I am an always-learning machine that converts energy drinks into clean and scalable code.";
+    "Thales' Portfolio. Full-stack software engineer, UI/UX Designer. I am an always-learning machine that converts energy drinks into clean and scalable code.";
   const title = "Thales Ludwig";
   const image = "https://i.ibb.co/PgmvPZD/IMG-0246-2.jpg";
 
@@ -61,11 +59,7 @@ function App({ Component, pageProps }) {
         <IntlProvider>
           <Content>
             <Header />
-            <Sidenav />
-            <Main>
-              <Component {...pageProps} />
-            </Main>
-            <Chat />
+            <Component {...pageProps} />
           </Content>
         </IntlProvider>
       </ConnectedTheme>

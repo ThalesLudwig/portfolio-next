@@ -1,5 +1,4 @@
 import {
-  Container,
   ImageBackground,
   Title,
   Status,
@@ -26,26 +25,24 @@ function EducationCard({
   icon,
 }) {
   return (
-    <Container>
-      <Card>
-        <ImageBackground src={image} />
-        <ContentWrapper>
-          <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
-          <SchoolWrapper>
-            <Logo src={logo} />
-            <SchoolLocationWrapper>
-              <School>{school}</School>
-              <Location>{location}</Location>
-            </SchoolLocationWrapper>
-          </SchoolWrapper>
-        </ContentWrapper>
-      </Card>
-      <StatusWrapper>
-        <StatusIcon src={icon} />
-        <Status>{status}</Status>
-      </StatusWrapper>
-    </Container>
+    <Card>
+      <ImageBackground src={image} />
+      <ContentWrapper>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
+        <SchoolWrapper>
+          <Logo src={logo} />
+          <SchoolLocationWrapper>
+            <School>{school}</School>
+            <Location>{location}</Location>
+          </SchoolLocationWrapper>
+        </SchoolWrapper>
+        <StatusWrapper>
+          <StatusIcon src={icon} />
+          <Status>{status}</Status>
+        </StatusWrapper>
+      </ContentWrapper>
+    </Card>
   );
 }
 

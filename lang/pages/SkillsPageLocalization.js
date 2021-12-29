@@ -24,6 +24,7 @@ export default defineMessages({
   },
   header: {
     id: "skills.hero",
-    defaultMessage: "This is the list of what I can do.",
+    defaultMessage:
+      "This is the list of what I usually do, but I'm always up for something new!",
   },
 });

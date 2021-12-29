@@ -63,7 +63,6 @@ function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
 
   return (
     <Container
-      isChatPage={router.asPath === "/chat"}
       onSubmit={(e) =>
         submitForm({
           event: e,

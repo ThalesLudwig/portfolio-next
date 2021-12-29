@@ -1,14 +1,19 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
+import { MOBILE, TABLET } from "../../constants/screen";
 import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
-  width: 300px;
-  min-width: 300px;
+  width: 260px;
+  min-width: 260px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   margin: 0px 20px 20px 0px;
+
+  @media (max-width: ${TABLET}) {
+    min-width: unset;
+    width: 220px;
+  }
 
   @media (max-width: ${MOBILE}) {
     width: 100vw;
@@ -32,8 +37,13 @@ export const ImageBackground = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
+  @media (max-width: ${TABLET}) {
+    width: 220px;
+  }
+
   @media (max-width: ${MOBILE}) {
     border-radius: 0px;
+    width: 100vw;
   }
 `;
 

@@ -1,24 +1,27 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
+import { MOBILE, TABLET } from "../../constants/screen";
 import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
-  width: 380px;
-  max-width: 380px;
-  height: 140px;
+  width: 345px;
+  height: 170px;
   display: flex;
   flex-direction: column;
-  margin-right: 17px;
   margin-bottom: 17px;
   background-color: ${({ theme }) => theme.colors.card};
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 8px;
   justify-content: space-between;
   box-shadow: ${SHADOWS.default};
 
+  @media (max-width: ${TABLET}) {
+    width: 320px;
+  }
+
   @media (max-width: ${MOBILE}) {
     width: 100vw;
     max-width: 100vw;
+    min-width: unset;
     margin-right: 0px;
     margin-bottom: 10px;
     border-radius: 0px;
@@ -57,6 +60,7 @@ export const Text = styled.div`
 
 export const Link = styled.a`
   cursor: ${({ isClosed }) => (isClosed ? "default" : "pointer")};
+  max-width: 380px;
 `;
 
 export const Pill = styled.div`
