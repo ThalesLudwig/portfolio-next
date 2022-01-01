@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SHADOWS } from "../../constants/shadow";
 
 export const Container = styled.div`
-  margin: 2px 0px;
+  margin: ${({ isPrimary }) => (isPrimary ? "2px" : "10px")} 0px;
   display: flex;
   align-items: center;
   flex-direction: ${({ isPrimary }) => (isPrimary ? "row" : "row-reverse")};

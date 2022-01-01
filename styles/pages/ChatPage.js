@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MOBILE } from "../../constants/screen";
 
 export const Container = styled.form`
   display: flex;
@@ -14,11 +13,7 @@ export const Input = styled.div`
   border: none;
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100vw;
 `;
 
 export const NativeInput = styled.input`

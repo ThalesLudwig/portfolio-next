@@ -33,6 +33,7 @@ export const ImagesRow = styled.div`
 
   @media (max-width: ${MOBILE}) {
     margin-top: 10px;
+    justify-content: flex-start;
   }
 `;
 
@@ -49,7 +50,7 @@ export const Image = styled.div`
   @media (max-width: ${MOBILE}) {
     width: 80px;
     height: 80px;
-    margin-top: 10px;
+    margin: 10px 10px 0 0;
   }
 
   &:hover {
