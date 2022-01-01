@@ -11,9 +11,7 @@ import IntlProvider from "../components/IntlProvider";
 const MainProvider = ({ children }) => {
   return process.browser ? (
     <Provider store={store}>
-      <PersistGate loading="Loading" persistor={persistor}>
-        {children}
-      </PersistGate>
+      <PersistGate persistor={persistor}>{children}</PersistGate>
     </Provider>
   ) : (
     <Provider store={store}>{children}</Provider>
