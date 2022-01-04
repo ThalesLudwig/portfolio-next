@@ -1,16 +1,19 @@
 import Modal from "../Modal/Modal";
 import { useIntl } from "react-intl";
 import localization from "./localization";
+import Image from "next/image";
 import {
   Container,
   Title,
   Subtitle,
   ImagesRow,
-  Image,
+  ImageWrapper,
 } from "./RemoteModalStyled";
 
 export const RemoteModal = ({ isOpen, onClose }) => {
   const { formatMessage } = useIntl();
+  const IMAGE_QUALITY = 10;
+  const IMAGE_FIT = "cover";
 
   return (
     <Modal
@@ -22,12 +25,54 @@ export const RemoteModal = ({ isOpen, onClose }) => {
         <Title>{formatMessage(localization.title)} 🌎</Title>
         <Subtitle>{formatMessage(localization.text)}</Subtitle>
         <ImagesRow>
-          <Image url="about/remote/paris_1.png" />
-          <Image url="about/remote/paris_2.png" />
-          <Image url="about/remote/rome_1.png" />
-          <Image url="about/remote/rome_2.png" />
-          <Image url="about/remote/dublin_1.png" />
-          <Image url="about/remote/dublin_2.png" />
+          <ImageWrapper>
+            <Image
+              src="/about/remote/paris_1.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/remote/paris_2.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/remote/rome_1.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/remote/rome_2.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/remote/dublin_1.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/remote/dublin_2.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
         </ImagesRow>
       </Container>
     </Modal>

@@ -16,6 +16,7 @@ const Modal = ({ isOpen, onClose, theme, imageUrl, children }) => {
       borderRadius: 10,
       backgroundColor: theme.colors.card,
       padding: 0,
+      overflow: "hidden",
     },
     overlay: {
       zIndex: 150,
@@ -24,7 +25,12 @@ const Modal = ({ isOpen, onClose, theme, imageUrl, children }) => {
   };
 
   return (
-    <ReactModal isOpen={isOpen} onRequestClose={onClose} style={customStyles}>
+    <ReactModal
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      style={customStyles}
+      ariaHideApp={false}
+    >
       <Content imageUrl={imageUrl}>
         <Header>
           <Hoverable onClick={onClose}>

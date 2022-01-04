@@ -37,15 +37,13 @@ export const ImagesRow = styled.div`
   }
 `;
 
-export const Image = styled.div`
-  background-image: ${({ url }) => `url(${url})`};
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+export const ImageWrapper = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 10px;
   margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: ${MOBILE}) {
     width: 80px;

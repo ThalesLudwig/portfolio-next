@@ -1,16 +1,19 @@
 import Modal from "../Modal/Modal";
 import { useIntl } from "react-intl";
 import localization from "./localization";
+import Image from "next/image";
 import {
   Container,
   Title,
   Subtitle,
   ImagesRow,
-  Image,
+  ImageWrapper,
 } from "./GamesModalStyled";
 
 export const GamesModal = ({ isOpen, onClose }) => {
   const { formatMessage } = useIntl();
+  const IMAGE_QUALITY = 10;
+  const IMAGE_FIT = "cover";
 
   return (
     <Modal
@@ -23,12 +26,54 @@ export const GamesModal = ({ isOpen, onClose }) => {
         <Title>{formatMessage(localization.text)}</Title>
         <Subtitle>{formatMessage(localization.favorites)}</Subtitle>
         <ImagesRow>
-          <Image url="about/games/acodyssey.png" />
-          <Image url="about/games/gow.png" />
-          <Image url="about/games/p5.png" />
-          <Image url="about/games/rdr2.png" />
-          <Image url="about/games/alanwake.png" />
-          <Image url="about/games/uncharted.png" />
+          <ImageWrapper>
+            <Image
+              src="/about/games/acodyssey.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/games/gow.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/games/p5.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/games/rdr2.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/games/alanwake.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
+          <ImageWrapper>
+            <Image
+              src="/about/games/uncharted.png"
+              layout="fill"
+              objectFit={IMAGE_FIT}
+              quality={IMAGE_QUALITY}
+            />
+          </ImageWrapper>
         </ImagesRow>
       </Container>
     </Modal>

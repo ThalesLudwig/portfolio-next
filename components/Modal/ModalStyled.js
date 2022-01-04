@@ -10,6 +10,7 @@ export const Content = styled.div`
   padding: 20px;
   box-sizing: border-box;
   animation: 1s ${pulseAnimation};
+  overflow: hidden;
 
   ${({ imageUrl }) =>
     imageUrl &&
