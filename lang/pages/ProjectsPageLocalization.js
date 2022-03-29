@@ -8,18 +8,15 @@ export default defineMessages({
   },
   secondGreeting: {
     id: "projects.greeting.second",
-    defaultMessage:
-      "I also have an app published on the Play Store, made with React Native.",
+    defaultMessage: "I also have a couple of apps published on the Play Store, made with React Native.",
   },
   thirdGreeting: {
     id: "projects.greeting.third",
-    defaultMessage:
-      "Most of them are just academic stuff, but you'll probably want to take a look at AIDEN.",
+    defaultMessage: "I'm always submitting new stuff, but you'll probably want to take a look at AIDEN.",
   },
   fourthGreeting: {
     id: "projects.greeting.fourth",
-    defaultMessage:
-      "What's AIDEN? It's me! Well, my API at least. Seriously, go check that repository. I'll wait.",
+    defaultMessage: "What's AIDEN? It's me! Well, my API at least. Seriously, go check that repository. I'll wait.",
   },
   title: {
     id: "header.tabs.projects",
@@ -38,11 +35,6 @@ export default defineMessages({
     id: "projects.name.portfolio",
     defaultMessage: "My portfolio. You are here now.",
   },
-  projectCoffegramWeb: {
-    id: "projects.name.coffegramWeb",
-    defaultMessage:
-      "A portfolio project to show the use of React and its libraries.",
-  },
   projectPaguei: {
     id: "projects.name.paguei",
     defaultMessage: "The code for the Paguei app.",
@@ -51,28 +43,16 @@ export default defineMessages({
     id: "projects.name.pagueiApp",
     defaultMessage: "A simple financial control app with React Native.",
   },
-  projectCoffegramMobile: {
-    id: "projects.name.coffegramMobile",
-    defaultMessage:
-      "The mobile app for Coffeegram. It's a basic Instagram clone.",
+  journalyMobile: {
+    id: "projects.name.journaly",
+    defaultMessage: "The mobile app for Journaly, a privacy-focused journling app.",
   },
   projectAiden: {
     id: "projects.name.aiden",
-    defaultMessage:
-      "Artificial Intelligence Designed for Extensions in Node. It's the bot to your right! 😄",
-  },
-  projectCoffeegramServer: {
-    id: "projects.name.coffegramServer",
-    defaultMessage:
-      "The server for the Coffeegram app and web version, with NodeJS.",
+    defaultMessage: "Artificial Intelligence Designed for Extensions in Node.",
   },
   projectCondofy: {
     id: "projects.name.condofy",
     defaultMessage: "The new project I'm working on. It's a work in progress.",
-  },
-  projectSwapi: {
-    id: "projects.name.swapi",
-    defaultMessage:
-      "A portfolio project to show the use of VueJS and its libraries.",
   },
 });

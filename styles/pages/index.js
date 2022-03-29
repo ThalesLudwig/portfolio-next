@@ -71,8 +71,7 @@ export const CardWrapper = styled.div`
 `;
 
 export const ProfileCard = styled.div`
-  background-image: linear-gradient(#222126, rgba(130, 87, 230, 0.73)),
-    url("about/background.jpeg");
+  background-image: linear-gradient(#222126, rgba(130, 87, 230, 0.73)), url("about/background.jpeg");
   background-color: ${({ theme }) => theme.colors.card};
   background-position: center;
   background-repeat: no-repeat;
@@ -156,7 +155,7 @@ export const ContactSection = styled.section`
 export const EducationSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin: 40px 0;
 
   @media (max-width: ${MOBILE}) {
     margin: 0;
@@ -186,33 +185,11 @@ export const SkillsSection = styled.section`
   margin-top: 40px;
 `;
 
-export const CareerSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-
-  @media (max-width: ${MOBILE}) {
-    margin: 0;
-  }
-`;
-
-export const CareerHobbiesRow = styled.section`
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-
-  @media (max-width: ${MOBILE}) {
-    flex-direction: column;
-  }
-`;
-
 export const ProjectsColumn = styled.div`
   display: flex;
   flex-direction: column;
-  border-left: ${({ hasBorder, theme }) =>
-    hasBorder ? `1px solid ${theme.colors.divisor}` : "none"};
-  border-right: ${({ hasBorder, theme }) =>
-    hasBorder ? `1px solid ${theme.colors.divisor}` : "none"};
+  border-left: ${({ hasBorder, theme }) => (hasBorder ? `1px solid ${theme.colors.divisor}` : "none")};
+  border-right: ${({ hasBorder, theme }) => (hasBorder ? `1px solid ${theme.colors.divisor}` : "none")};
   flex: 1;
   padding-right: ${({ withPaddingRight }) => (withPaddingRight ? "20px" : "0")};
   padding-left: ${({ withPaddingLeft }) => (withPaddingLeft ? "20px" : "0")};
@@ -284,76 +261,5 @@ export const EducationRow = styled.div`
     &::-webkit-scrollbar-thumb {
       display: none;
     }
-  }
-`;
-
-export const Timeline = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-
-  @media (max-width: ${MOBILE}) {
-    padding-right: 0;
-  }
-`;
-
-export const Line = styled.div`
-  margin-left: 50px;
-  border-left: 2px solid
-    ${({ theme, isLast }) =>
-      isLast ? theme.colors.primary : theme.colors.secondary};
-  height: ${({ isLast }) => (isLast ? "25px" : "50px")};
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const TimeStop = styled.div`
-  background-color: ${({ theme, isLast }) =>
-    isLast ? theme.colors.primary : theme.colors.secondary};
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-top: ${({ isLast }) => (isLast ? "-15px" : "0px")};
-`;
-
-export const TimeWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: ${({ isLast }) => (isLast ? "flex-start" : "center")};
-  margin-left: -8px;
-`;
-
-export const Time = styled.div`
-  color: ${({ theme }) => theme.colors.title};
-  font-size: ${({ theme }) => theme.sizes.subtitle};
-  margin-top: ${({ isLast }) => (isLast ? "-20px" : "0px")};
-`;
-
-export const ArticlesList = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 30px;
-
-  @media (max-width: ${MOBILE}) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-bottom: 30px;
-  }
-`;
-
-export const DesignList = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 30px;
-
-  @media (max-width: ${MOBILE}) {
-    flex-direction: column;
-    flex-wrap: nowrap;
   }
 `;

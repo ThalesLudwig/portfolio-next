@@ -15,6 +15,6 @@ export default defineMessages({
   },
   thirdGreeting: {
     id: "chat.greeting.third",
-    defaultMessage: "We can simulate an interview here!",
+    defaultMessage: "Take a look at the AIDEN project if you want to see my code!",
   },
 });

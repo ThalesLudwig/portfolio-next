@@ -23,8 +23,7 @@ export default defineMessages({
   },
   header: {
     id: "contact.hero",
-    defaultMessage:
-      "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
+    defaultMessage: "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
   },
   instagram: {
     id: "contact.social.instagram",
@@ -42,9 +41,9 @@ export default defineMessages({
     id: "contact.social.linkedin",
     defaultMessage: "My online resume, with all that basic information.",
   },
-  dribbble: {
-    id: "contact.social.dribbble",
-    defaultMessage: "Here is where I like to pretend to be a designer.",
+  stackoverflow: {
+    id: "contact.social.stackoverflow",
+    defaultMessage: "I help someone here and there.",
   },
   coffee: {
     id: "contact.social.coffee",
@@ -52,8 +51,7 @@ export default defineMessages({
   },
   facebook: {
     id: "contact.social.facebook",
-    defaultMessage:
-      "Usually just for friends and family, but hey, go ahead if you want.",
+    defaultMessage: "Usually just for friends and family, but hey, go ahead if you want.",
   },
   medium: {
     id: "contact.social.medium",

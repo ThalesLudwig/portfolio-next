@@ -51,11 +51,4 @@ export const ImageWrapper = styled.div`
     height: 80px;
     margin: 10px 10px 0 0;
   }
-
-  &:hover {
-    width: 150px;
-    height: 150px;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.3s ease;
-  }
 `;
