@@ -42,7 +42,7 @@ export const EN_US = {
   "chat.skills.about": "About my skills... 🛠️",
 
   "about.hero":
-    "Full-stack software engineer, UI/UX Designer. I am an always-learning machine that converts energy drinks into clean and scalable code.",
+    "Full-stack software engineer, UI/UX Designer. I am an always-learning machine that converts coffee and energy drinks into clean and scalable code.",
   "career.hero": "My professional journey until this point.",
   "contact.hero": "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
   "education.hero": "These are my academic qualifications. I'm also constantly learning new stuff by myself!",
@@ -54,7 +54,7 @@ export const EN_US = {
 
   "about.card.one": "🚩 Currently located in the south of Brazil.",
   "about.card.two": "🌎  Enthusiast of remote work lifestyle.",
-  "about.card.three": "🎮  Game development student!",
+  "about.card.three": "🎮  Game lover!",
 
   "about.news.happening": "What’s happening now",
   "about.news.one": "Starting a new personal project with Angular.",
@@ -99,15 +99,4 @@ export const EN_US = {
 
   "theme.dark": "Dark Mode",
   "theme.light": "Light Mode",
-
-  "modal.games.title": "I'm a Gamer",
-  "modal.games.text": "And a game development student.",
-  "modal.games.favorites": "Here are some of my favorites:",
-
-  "modal.remote.title": "I'm an enthusiast of the remote work lifestyle",
-  "modal.remote.text": "Here are the last places my wife and I went to:",
-
-  "modal.personal.title": "I live in Brazil",
-  "modal.personal.subtitle": "With my wife, Camila, and my kitty",
-  "modal.personal.text": "Here you can get to know a bit better:",
 };

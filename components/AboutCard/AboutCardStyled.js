@@ -9,7 +9,6 @@ export const Container = styled.div`
   flex-direction: column;
   margin-right: 15px;
   margin-top: 15px;
-  cursor: pointer;
 
   @media (max-width: ${TABLET}) {
     margin: 0 0 15px 0;
@@ -18,12 +17,6 @@ export const Container = styled.div`
   @media (max-width: ${MOBILE}) {
     margin-right: 15px;
     margin-top: 15px;
-  }
-
-  &:hover {
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
   }
 `;
 

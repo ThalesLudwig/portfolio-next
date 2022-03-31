@@ -11,6 +11,11 @@ export const Main = styled.div`
   flex-direction: column;
   animation: 1s ${fadeInAnimation};
   max-width: 1120px;
+  margin-top: 50px;
+
+  @media (max-width: ${MOBILE}) {
+    margin: 0;
+  }
 `;
 
 export const AboutSection = styled.section`

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import localization from "../lang/pages/MainLocalization";
 import localizationContact from "../lang/pages/ContactPageLocalization";
 import localizationProjects from "../lang/pages/ProjectsPageLocalization";
@@ -13,9 +13,6 @@ import ContactComponent from "../components/Contact";
 import ProjectCard from "../components/Project";
 import Skill from "../components/Skill";
 import EducationCard from "../components/EducationCard";
-import GamesModal from "../components/GamesModal/GamesModal";
-import RemoteModal from "../components/RemoteModal/RemoteModal";
-import PersonalModal from "../components/PersonalModal/PersonalModal";
 import {
   Main,
   AboutSection,
@@ -43,9 +40,6 @@ import {
 export default function Home() {
   const { formatMessage } = useIntl();
   const contactSectionRef = useRef(null);
-  const [isPersonalModalOpen, setIsPersonalModalOpen] = useState(false);
-  const [isRemoteModalOpen, setIsRemoteModalOpen] = useState(false);
-  const [isGamesModalOpen, setIsGamesModalOpen] = useState(false);
 
   return (
     <Main>
@@ -64,21 +58,9 @@ export default function Home() {
             </HireMe>
           </ProfileCard>
           <CardWrapper>
-            <AboutCard
-              title={formatMessage(localization.cardOne)}
-              image="about/about_card_1.png"
-              onClick={() => setIsPersonalModalOpen(true)}
-            />
-            <AboutCard
-              title={formatMessage(localization.cardTwo)}
-              image="about/about_card_2.png"
-              onClick={() => setIsRemoteModalOpen(true)}
-            />
-            <AboutCard
-              title={formatMessage(localization.cardThree)}
-              image="about/about_card_3.png"
-              onClick={() => setIsGamesModalOpen(true)}
-            />
+            <AboutCard title={formatMessage(localization.cardOne)} image="about/about_card_1.png" />
+            <AboutCard title={formatMessage(localization.cardTwo)} image="about/about_card_2.png" />
+            <AboutCard title={formatMessage(localization.cardThree)} image="about/about_card_3.png" />
           </CardWrapper>
         </Content>
         <Chat />
@@ -241,9 +223,6 @@ export default function Home() {
           />
         </EducationRow>
       </EducationSection>
-      <PersonalModal isOpen={isPersonalModalOpen} onClose={() => setIsPersonalModalOpen(false)} />
-      <RemoteModal isOpen={isRemoteModalOpen} onClose={() => setIsRemoteModalOpen(false)} />
-      <GamesModal isOpen={isGamesModalOpen} onClose={() => setIsGamesModalOpen(false)} />
     </Main>
   );
 }

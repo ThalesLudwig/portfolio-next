@@ -44,7 +44,7 @@ export const PT_BR = {
   "chat.skills.about": "Sobre minhas habilidades... 🛠️",
 
   "about.hero":
-    "Engenheiro de software, UI/UX Designer. Eu sou uma máquina de aprendizado que converte energéticos em código limpo e escalável.",
+    "Engenheiro de software, UI/UX Designer. Eu sou uma máquina de aprendizado que converte café e energéticos em código limpo e escalável.",
   "career.hero": "Minha jornada profissional até este momento.",
   "contact.hero": "Você pode entrar em contato comigo de todas essas formas. Ou use o e-mail: thales.ludwig@gmail.com",
   "education.hero":
@@ -58,7 +58,7 @@ export const PT_BR = {
 
   "about.card.one": "🚩 Atualmente residindo no sul do Brasil.",
   "about.card.two": "🌎  Entusiasta do estilo de vida remoto.",
-  "about.card.three": "🎮  Estudante de desenvolvimento de jogos!",
+  "about.card.three": "🎮  Amante de jogos!",
 
   "about.news.happening": "Últimos acontecimentos",
   "about.news.one": "Começando um novo projeto pessoal com Angular.",
@@ -104,15 +104,4 @@ export const PT_BR = {
 
   "theme.dark": "Modo Escuro",
   "theme.light": "Modo Claro",
-
-  "modal.games.title": "Eu sou Gamer",
-  "modal.games.text": "E um estudante de desenvolvimento de jogos.",
-  "modal.games.favorites": "Aqui estão alguns dos meus favoritos:",
-
-  "modal.remote.title": "Eu sou um entusiasta do estilo de vida remoto",
-  "modal.remote.text": "Aqui estão os últimos lugares que minha esposa e eu visitamos:",
-
-  "modal.personal.title": "Eu moro no Brasil",
-  "modal.personal.subtitle": "Com minha esposa, Camila, e minha gatinha",
-  "modal.personal.text": "Me conheça um pouco melhor:",
 };
