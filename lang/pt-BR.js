@@ -49,8 +49,7 @@ export const PT_BR = {
   "contact.hero": "Você pode entrar em contato comigo de todas essas formas. Ou use o e-mail: thales.ludwig@gmail.com",
   "education.hero":
     "Estas são minhas qualificações acadêmicas. Eu também estou constantemente aprendendo coisas novas por conta própria!",
-  "projects.hero":
-    "Meus projetos mais recentes. Alguns deles são puramente acadêmicos para demonstrar o uso de uma determinada tecnologia.",
+  "projects.hero": "Meus projetos mais recentes. Mais a caminho!",
   "skills.hero": "Aqui está uma lista do que eu normalmente faço, mas eu sempre aceito um desafio!",
 
   "about.hire": "Fale comigo",
@@ -91,9 +90,10 @@ export const PT_BR = {
 
   "projects.name.portfolio": "Meu portfólio. Você está aqui agora.",
   "projects.name.coffegramWeb": "Um projeto para demonstrar o uso do React e suas bibliotecas.",
-  "projects.name.paguei": "O código do app Paguei.",
+  "projects.name.paguei": "O código do app Paguei. Melhorias estão a caminho!",
   "projects.name.pagueiApp": "Um aplicativo simples de controle financeiro com React Native.",
   "projects.name.journaly": "O app mobile do Journaly, um diário focado em privacidade.",
+  "projects.name.journalyCode": "O código do app Journaly, usando React Native.",
   "projects.name.aiden": "Artificial Intelligence Designed for Extensions in Node.",
   "projects.name.coffegramServer": "O servidor do Coffeegram, app e web, com NodeJS.",
   "projects.name.condofy": "O projeto novo no qual estou trabalhando. Está em andamento.",

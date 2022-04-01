@@ -28,8 +28,7 @@ export default defineMessages({
   },
   header: {
     id: "projects.hero",
-    defaultMessage:
-      "My most recent projects. Some of them are purely academic to demonstrate the use of a certain technology.",
+    defaultMessage: "My most recent projects. More on the way!",
   },
   projectPortfolio: {
     id: "projects.name.portfolio",
@@ -37,7 +36,7 @@ export default defineMessages({
   },
   projectPaguei: {
     id: "projects.name.paguei",
-    defaultMessage: "The code for the Paguei app.",
+    defaultMessage: "The code for the Paguei app. Improvements are on the way!",
   },
   projectPagueiApp: {
     id: "projects.name.pagueiApp",
@@ -46,6 +45,10 @@ export default defineMessages({
   journalyMobile: {
     id: "projects.name.journaly",
     defaultMessage: "The mobile app for Journaly, a privacy-focused journling app.",
+  },
+  journalyCode: {
+    id: "projects.name.journalyCode",
+    defaultMessage: "The code for the Journaly app, using React Native.",
   },
   projectAiden: {
     id: "projects.name.aiden",

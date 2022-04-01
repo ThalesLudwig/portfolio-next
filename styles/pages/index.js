@@ -160,7 +160,7 @@ export const ContactSection = styled.section`
 export const EducationSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 40px 0;
+  margin-top: 40px;
 
   @media (max-width: ${MOBILE}) {
     margin: 0;
@@ -170,7 +170,7 @@ export const EducationSection = styled.section`
 export const ProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin: 40px 0;
 `;
 
 export const ProjectsRow = styled.div`

@@ -99,67 +99,6 @@ export default function Home() {
           </ContactComponent>
         </ContactRow>
       </ContactSection>
-      <ProjectsSection>
-        <PageHeader title={formatMessage(localizationProjects.title)} icon="💻">
-          {formatMessage(localizationProjects.header)}
-        </PageHeader>
-        <ProjectsRow>
-          <ProjectsColumn withPaddingRight>
-            <PageHeader title="React" />
-            <ProjectList>
-              <ProjectCard
-                pills={["React", "Redux"]}
-                title="Condofy"
-                url="https://github.com/ThalesLudwig/condofy-web-react"
-              >
-                {formatMessage(localizationProjects.projectCondofy)}
-              </ProjectCard>
-              <ProjectCard
-                pills={["React", "NextJS", "Redux"]}
-                title="portfolio-next"
-                url="https://github.com/ThalesLudwig/portfolio-next"
-              >
-                {formatMessage(localizationProjects.projectPortfolio)}
-              </ProjectCard>
-            </ProjectList>
-          </ProjectsColumn>
-          <ProjectsColumn hasBorder withPaddingRight withPaddingLeft>
-            <PageHeader title="React Native" />
-            <ProjectList>
-              <ProjectCard
-                pills={["React Native", "Expo"]}
-                title="paguei-rn"
-                url="https://github.com/ThalesLudwig/paguei-rn"
-              >
-                {formatMessage(localizationProjects.projectPaguei)}
-              </ProjectCard>
-              <ProjectCard
-                pills={["React Native", "Expo"]}
-                title="Paguei"
-                url="https://play.google.com/store/apps/details?id=com.valentini.ludwig.thales"
-                image="social/playstore.jpeg"
-              >
-                {formatMessage(localizationProjects.projectPagueiApp)}
-              </ProjectCard>
-              <ProjectCard
-                pills={["React Native", "Expo"]}
-                title="journaly-mobile"
-                url="https://github.com/ThalesLudwig/journaly-rn"
-              >
-                {formatMessage(localizationProjects.journalyMobile)}
-              </ProjectCard>
-            </ProjectList>
-          </ProjectsColumn>
-          <ProjectsColumn withPaddingLeft>
-            <PageHeader title="NodeJS" />
-            <ProjectList>
-              <ProjectCard pills={["Node", "Express"]} title="aiden" url="https://github.com/ThalesLudwig/aiden">
-                {formatMessage(localizationProjects.projectAiden)}
-              </ProjectCard>
-            </ProjectList>
-          </ProjectsColumn>
-        </ProjectsRow>
-      </ProjectsSection>
       <SkillsSection>
         <PageHeader title={formatMessage(localizationSkills.title)} icon="🛠️">
           {formatMessage(localizationSkills.header)}
@@ -223,6 +162,75 @@ export default function Home() {
           />
         </EducationRow>
       </EducationSection>
+      <ProjectsSection>
+        <PageHeader title={formatMessage(localizationProjects.title)} icon="💻">
+          {formatMessage(localizationProjects.header)}
+        </PageHeader>
+        <ProjectsRow>
+          <ProjectsColumn withPaddingRight>
+            <PageHeader title="React" />
+            <ProjectList>
+              <ProjectCard
+                pills={["React", "Redux"]}
+                title="Condofy"
+                url="https://github.com/ThalesLudwig/condofy-web-react"
+              >
+                {formatMessage(localizationProjects.projectCondofy)}
+              </ProjectCard>
+              <ProjectCard
+                pills={["React", "NextJS", "Redux"]}
+                title="portfolio-next"
+                url="https://github.com/ThalesLudwig/portfolio-next"
+              >
+                {formatMessage(localizationProjects.projectPortfolio)}
+              </ProjectCard>
+            </ProjectList>
+          </ProjectsColumn>
+          <ProjectsColumn hasBorder withPaddingRight withPaddingLeft>
+            <PageHeader title="React Native" />
+            <ProjectList>
+              <ProjectCard
+                pills={["React Native", "Expo", "Redux"]}
+                title="journaly-mobile"
+                url="https://github.com/ThalesLudwig/journaly-rn"
+              >
+                {formatMessage(localizationProjects.journalyCode)}
+              </ProjectCard>
+              <ProjectCard
+                pills={["React Native", "Expo", "Redux"]}
+                title="Journaly"
+                url="https://play.google.com/store/apps/details?id=com.valentini.journaly"
+                image="social/playstore.jpeg"
+              >
+                {formatMessage(localizationProjects.journalyMobile)}
+              </ProjectCard>
+              <ProjectCard
+                pills={["React Native", "Expo", "Redux"]}
+                title="paguei-rn"
+                url="https://github.com/ThalesLudwig/paguei-rn"
+              >
+                {formatMessage(localizationProjects.projectPaguei)}
+              </ProjectCard>
+              <ProjectCard
+                pills={["React Native", "Expo", "Redux"]}
+                title="Paguei"
+                url="https://play.google.com/store/apps/details?id=com.valentini.ludwig.thales"
+                image="social/playstore.jpeg"
+              >
+                {formatMessage(localizationProjects.projectPagueiApp)}
+              </ProjectCard>
+            </ProjectList>
+          </ProjectsColumn>
+          <ProjectsColumn withPaddingLeft>
+            <PageHeader title="NodeJS" />
+            <ProjectList>
+              <ProjectCard pills={["Node", "Express"]} title="aiden" url="https://github.com/ThalesLudwig/aiden">
+                {formatMessage(localizationProjects.projectAiden)}
+              </ProjectCard>
+            </ProjectList>
+          </ProjectsColumn>
+        </ProjectsRow>
+      </ProjectsSection>
     </Main>
   );
 }
