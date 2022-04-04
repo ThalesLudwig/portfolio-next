@@ -90,13 +90,14 @@ export const PT_BR = {
 
   "projects.name.portfolio": "Meu portfólio. Você está aqui agora.",
   "projects.name.coffegramWeb": "Um projeto para demonstrar o uso do React e suas bibliotecas.",
-  "projects.name.paguei": "O código do app Paguei. Melhorias estão a caminho!",
-  "projects.name.pagueiApp": "Um aplicativo simples de controle financeiro com React Native.",
+  "projects.name.moneyger": "O código do app Moneyger.",
+  "projects.name.moneygerApp": "Um aplicativo simples de controle financeiro com React Native.",
   "projects.name.journaly": "O app mobile do Journaly, um diário focado em privacidade.",
   "projects.name.journalyCode": "O código do app Journaly, usando React Native.",
   "projects.name.aiden": "Artificial Intelligence Designed for Extensions in Node.",
   "projects.name.coffegramServer": "O servidor do Coffeegram, app e web, com NodeJS.",
   "projects.name.condofy": "O projeto novo no qual estou trabalhando. Está em andamento.",
+  "projects.name.condofyServer": "O servidor do app Condofy. Está em andamento.",
 
   "settings.theme": "Alternar tema de cores",
   "settings.language": "Escolher idioma",

@@ -85,13 +85,14 @@ export const EN_US = {
 
   "projects.name.portfolio": "My portfolio. You are here now.",
   "projects.name.coffegramWeb": "A project to show the use of React and its libraries.",
-  "projects.name.paguei": "The code for the Paguei app. Improvements are on the way!",
-  "projects.name.pagueiApp": "A simple financial control app with React Native.",
+  "projects.name.moneyger": "The code for the Moneyger app.",
+  "projects.name.moneygerApp": "A simple financial control app with React Native.",
   "projects.name.journaly": "The mobile app for Journaly, a privacy-focused journling app.",
   "projects.name.journalyCode": "The code for the Journaly app, using React Native.",
   "projects.name.aiden": "Artificial Intelligence Designed for Extensions in Node.",
   "projects.name.coffegramServer": "The server for the Coffeegram app and web version, with NodeJS.",
   "projects.name.condofy": "The new project I'm working on. It's a work in progress.",
+  "projects.name.condofyServer": "The server for the Condofy app. It's a work in progress.",
 
   "settings.theme": "Switch theme color",
   "settings.language": "Choose language",

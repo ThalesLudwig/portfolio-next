@@ -190,14 +190,14 @@ export default function Home() {
             <PageHeader title="React Native" />
             <ProjectList>
               <ProjectCard
-                pills={["React Native", "Expo", "Redux"]}
+                pills={["React Native", "Typescript", "Redux"]}
                 title="journaly-mobile"
                 url="https://github.com/ThalesLudwig/journaly-rn"
               >
                 {formatMessage(localizationProjects.journalyCode)}
               </ProjectCard>
               <ProjectCard
-                pills={["React Native", "Expo", "Redux"]}
+                pills={["Expo"]}
                 title="Journaly"
                 url="https://play.google.com/store/apps/details?id=com.valentini.journaly"
                 image="social/playstore.jpeg"
@@ -205,27 +205,38 @@ export default function Home() {
                 {formatMessage(localizationProjects.journalyMobile)}
               </ProjectCard>
               <ProjectCard
-                pills={["React Native", "Expo", "Redux"]}
-                title="paguei-rn"
-                url="https://github.com/ThalesLudwig/paguei-rn"
+                pills={["React Native", "Javascript", "Redux"]}
+                title="moneyger-rn"
+                url="https://github.com/ThalesLudwig/moneyger-rn"
               >
-                {formatMessage(localizationProjects.projectPaguei)}
+                {formatMessage(localizationProjects.projectMoneyger)}
               </ProjectCard>
               <ProjectCard
-                pills={["React Native", "Expo", "Redux"]}
-                title="Paguei"
+                pills={["Expo"]}
+                title="Moneyger"
                 url="https://play.google.com/store/apps/details?id=com.valentini.ludwig.thales"
                 image="social/playstore.jpeg"
               >
-                {formatMessage(localizationProjects.projectPagueiApp)}
+                {formatMessage(localizationProjects.projectMoneygerApp)}
               </ProjectCard>
             </ProjectList>
           </ProjectsColumn>
           <ProjectsColumn withPaddingLeft>
             <PageHeader title="NodeJS" />
             <ProjectList>
-              <ProjectCard pills={["Node", "Express"]} title="aiden" url="https://github.com/ThalesLudwig/aiden">
+              <ProjectCard
+                pills={["Node", "Express", "Javascript"]}
+                title="aiden"
+                url="https://github.com/ThalesLudwig/aiden"
+              >
                 {formatMessage(localizationProjects.projectAiden)}
+              </ProjectCard>
+              <ProjectCard
+                pills={["Node", "Express", "Typescript"]}
+                title="condofy-server"
+                url="https://github.com/ThalesLudwig/condofy-server"
+              >
+                {formatMessage(localizationProjects.projectCondofyServer)}
               </ProjectCard>
             </ProjectList>
           </ProjectsColumn>

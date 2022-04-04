@@ -34,12 +34,12 @@ export default defineMessages({
     id: "projects.name.portfolio",
     defaultMessage: "My portfolio. You are here now.",
   },
-  projectPaguei: {
-    id: "projects.name.paguei",
-    defaultMessage: "The code for the Paguei app. Improvements are on the way!",
+  projectMoneyger: {
+    id: "projects.name.moneyger",
+    defaultMessage: "The code for the Moneyger app.",
   },
-  projectPagueiApp: {
-    id: "projects.name.pagueiApp",
+  projectMoneygerApp: {
+    id: "projects.name.moneygerApp",
     defaultMessage: "A simple financial control app with React Native.",
   },
   journalyMobile: {
@@ -57,5 +57,9 @@ export default defineMessages({
   projectCondofy: {
     id: "projects.name.condofy",
     defaultMessage: "The new project I'm working on. It's a work in progress.",
+  },
+  projectCondofyServer: {
+    id: "projects.name.condofyServer",
+    defaultMessage: "The server for the Condofy app. It's a work in progress.",
   },
 });
