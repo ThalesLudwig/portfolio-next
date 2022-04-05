@@ -177,7 +177,12 @@ export default function Home() {
               >
                 {formatMessage(localizationProjects.projectCondofy)}
               </ProjectCard>
-              <ProjectCard pills={["React", "Redux"]} title="Condofy (Demo)" url="https://condofy.vercel.app/">
+              <ProjectCard
+                pills={["React", "Redux"]}
+                title="Condofy (Demo)"
+                url="https://condofy.vercel.app/"
+                image="social/star.png"
+              >
                 {formatMessage(localizationProjects.projectCondofyDemo)}
               </ProjectCard>
               <ProjectCard
