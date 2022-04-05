@@ -93,6 +93,7 @@ export const ProfileCard = styled.div`
   padding: 25px;
   max-width: 700px;
   box-shadow: ${SHADOWS.default};
+  height: 392px;
 
   @media (max-width: ${TABLET}) {
     max-width: unset;

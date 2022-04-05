@@ -4,7 +4,7 @@ export default defineMessages({
   header: {
     id: "about.hero",
     defaultMessage:
-      "Full-stack software engineer, UI/UX Designer. I am an always-learning machine that converts coffee and energy drinks into clean and scalable code.",
+      "Full-stack software engineer. UI/UX Designer. A machine that converts energy drinks into clean and scalable code. Game Lover.",
   },
   hireMe: {
     id: "about.hire",

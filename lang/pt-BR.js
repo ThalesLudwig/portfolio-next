@@ -44,7 +44,7 @@ export const PT_BR = {
   "chat.skills.about": "Sobre minhas habilidades... 🛠️",
 
   "about.hero":
-    "Engenheiro de software, UI/UX Designer. Eu sou uma máquina de aprendizado que converte café e energéticos em código limpo e escalável.",
+    "Engenheiro de software. UI/UX Designer. Máquina que converte energéticos em código limpo e escalável. Gamer hardcore.",
   "career.hero": "Minha jornada profissional até este momento.",
   "contact.hero": "Você pode entrar em contato comigo de todas essas formas. Ou use o e-mail: thales.ludwig@gmail.com",
   "education.hero":

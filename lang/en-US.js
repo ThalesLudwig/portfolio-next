@@ -42,7 +42,7 @@ export const EN_US = {
   "chat.skills.about": "About my skills... 🛠️",
 
   "about.hero":
-    "Full-stack software engineer, UI/UX Designer. I am an always-learning machine that converts coffee and energy drinks into clean and scalable code.",
+    "Full-stack software engineer. UI/UX Designer. A machine that converts energy drinks into clean and scalable code. Game Lover.",
   "career.hero": "My professional journey until this point.",
   "contact.hero": "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
   "education.hero": "These are my academic qualifications. I'm also constantly learning new stuff by myself!",

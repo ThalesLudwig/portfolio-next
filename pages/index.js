@@ -13,6 +13,7 @@ import ContactComponent from "../components/Contact";
 import ProjectCard from "../components/Project";
 import Skill from "../components/Skill";
 import EducationCard from "../components/EducationCard";
+import ReactTypingEffect from "react-typing-effect";
 import {
   Main,
   AboutSection,
@@ -50,7 +51,15 @@ export default function Home() {
             <ProfileImage width={90} height={90} src="profile_crop.jpg" />
             <Greetings>{formatMessage(localization.hello)}</Greetings>
             <Greetings>{`${formatMessage(localization.name)} 👋`}</Greetings>
-            <Subtitle>{formatMessage(localization.header)}</Subtitle>
+            <Subtitle>
+              <ReactTypingEffect
+                text={formatMessage(localization.header).split(".")}
+                speed={70}
+                eraseSpeed={30}
+                eraseDelay={500}
+                typingDelay={500}
+              />
+            </Subtitle>
             <Link href="/chat">
               <SimulateInterview>{formatMessage(localization.simulate).toLocaleUpperCase()}</SimulateInterview>
             </Link>
