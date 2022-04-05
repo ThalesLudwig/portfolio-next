@@ -26,7 +26,7 @@ const renderIcon = ({ media }) => {
     case MEDIA.PLAYSTORE:
       return "social/playstore.jpeg";
     default:
-      return "ellipsis.svg";
+      return "social/star.png";
   }
 };
 
@@ -59,13 +59,7 @@ const Message = ({ isPrimary, text, hasAvatar, image, media, isAlt }) => {
           {text}
         </TextArea>
       )}
-      {!!image.id && (
-        <Image
-          src={image.content}
-          hasAvatar={hasAvatar}
-          isPrimary={isPrimary}
-        />
-      )}
+      {!!image.id && <Image src={image.content} hasAvatar={hasAvatar} isPrimary={isPrimary} />}
       {media.length > 0 && (
         <MediaWrapper hasMany={hasManyMedia} hasAvatar={hasAvatar}>
           {renderMedia(media)}

@@ -36,7 +36,7 @@ export const dark = {
     title: "#ECECEC",
     text: "#8B8DB1",
     divisor: "#222126",
-    messageBackground: "#222126",
+    messageBackground: "#8B8DB1",
     activeTab: "#ECECEC",
     messageMediaText: "#222126",
     messageTextPrimary: "#ECECEC",

@@ -16,6 +16,8 @@ export const Container = styled.form`
   @media (max-width: ${TABLET}) {
     height: calc(100vh - 80px);
     width: 100%;
+    padding-top: 0;
+    background: ${({ theme }) => theme.colors.background};
   }
 `;
 
@@ -27,6 +29,12 @@ export const Input = styled.div`
   flex-direction: row;
   margin-top: 5px;
   margin-bottom: 10px;
+
+  @media (max-width: ${TABLET}) {
+    margin: 0;
+    padding: 20px 25px;
+    background: ${({ theme }) => theme.colors.card};
+  }
 `;
 
 export const NativeInput = styled.input`
@@ -65,6 +73,10 @@ export const SuggestionArea = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media (max-width: ${TABLET}) {
+    background: ${({ theme }) => theme.colors.card};
+  }
 `;
 
 export const Suggestion = styled.span`
@@ -74,4 +86,8 @@ export const Suggestion = styled.span`
   margin: 0 5px 5px 0;
   font-size: 10px;
   background-color: ${({ theme }) => theme.colors.secondary};
+
+  @media (max-width: ${TABLET}) {
+    font-size: 14px;
+  }
 `;
