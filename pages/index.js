@@ -35,6 +35,7 @@ import {
   SkillList,
   EducationSection,
   EducationRow,
+  ChatWrapper,
 } from "../styles/pages";
 
 export default function Home() {
@@ -63,7 +64,9 @@ export default function Home() {
             <AboutCard title={formatMessage(localization.cardThree)} image="about/about_card_3.png" />
           </CardWrapper>
         </Content>
-        <Chat />
+        <ChatWrapper>
+          <Chat />
+        </ChatWrapper>
       </AboutSection>
       <ContactSection ref={contactSectionRef}>
         <PageHeader title={formatMessage(localizationContact.title)} icon="💬">

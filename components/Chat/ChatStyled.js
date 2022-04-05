@@ -14,12 +14,13 @@ export const Container = styled.form`
   padding-top: 15px;
 
   @media (max-width: ${TABLET}) {
-    display: none;
+    height: calc(100vh - 80px);
+    width: 100%;
   }
 `;
 
 export const Input = styled.div`
-  padding: 20px 25px;
+  padding: 10px 25px;
   background-color: ${({ theme }) => theme.colors.card};
   border: none;
   display: flex;
@@ -52,8 +53,25 @@ export const ScrollPanel = styled.div`
   scrollbar-width: none;
   overflow-y: auto;
   padding: 15px 30px;
+  flex: 1;
 
   &::-webkit-scrollbar {
     display: none;
   }
+`;
+
+export const SuggestionArea = styled.div`
+  padding: 5px 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+export const Suggestion = styled.span`
+  padding: 3px 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 0 5px 5px 0;
+  font-size: 10px;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;

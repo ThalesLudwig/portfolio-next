@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
-import { useRouter } from "next/router";
 import Message from "../Message/Message";
 import messageParser from "../../helpers/messageParser";
 import loadingMessage from "../../helpers/loadingMessage";
@@ -8,21 +7,17 @@ import localization from "../../lang/pages/ChatPageLocalization";
 import { useIntl } from "react-intl";
 import { addMessage, setIsLoading } from "../../config/messagesSlice";
 import submitForm from "./submitForm";
-import {
-  Container,
-  Input,
-  NativeInput,
-  ScrollPanel,
-  SendButton,
-} from "./ChatStyled";
+import { Container, Input, NativeInput, ScrollPanel, SendButton, Suggestion, SuggestionArea } from "./ChatStyled";
+import SUGGESTIONS from "../../constants/suggestions";
 
 function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
   const { formatMessage } = useIntl();
   const scrollPanelRef = useRef(null);
-  const router = useRouter();
   const [input, setInput] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
+    setSuggestions(SUGGESTIONS[location]);
     if (messages.length === 0) {
       addMessage(
         messageParser([
@@ -61,24 +56,29 @@ function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
     return messageList;
   };
 
+  const submit = ({ event, message }) => {
+    submitForm({
+      event,
+      input: message || input,
+      messages,
+      addMessage,
+      setInput,
+      setIsLoading,
+      location,
+    });
+  };
+
   return (
-    <Container
-      onSubmit={(e) =>
-        submitForm({
-          event: e,
-          input,
-          messages,
-          addMessage,
-          setInput,
-          setIsLoading,
-          location,
-        })
-      }
-    >
+    <Container onSubmit={(e) => submit({ event: e })}>
       <ScrollPanel ref={scrollPanelRef}>
         {printMessages(messages)}
         {isLoading && <Message {...loadingMessage} />}
       </ScrollPanel>
+      <SuggestionArea>
+        {suggestions.map((suggestion) => (
+          <Suggestion onClick={() => submit({ message: suggestion })}>{suggestion}</Suggestion>
+        ))}
+      </SuggestionArea>
       <Input>
         <NativeInput
           type="text"
@@ -86,20 +86,7 @@ function Chat({ location, messages, addMessage, isLoading, setIsLoading }) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <SendButton
-          onClick={() =>
-            submitForm({
-              input,
-              messages,
-              addMessage,
-              setInput,
-              setIsLoading,
-              location,
-            })
-          }
-          width="25"
-          height="25"
-        />
+        <SendButton onClick={submit} width="25" height="25" />
       </Input>
     </Container>
   );

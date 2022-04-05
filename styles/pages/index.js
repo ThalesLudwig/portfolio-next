@@ -36,6 +36,14 @@ export const Content = styled.div`
   }
 `;
 
+export const ChatWrapper = styled.div`
+  display: static;
+
+  @media (max-width: ${TABLET}) {
+    display: none;
+  }
+`;
+
 export const ProfileImage = styled.img`
   margin: 20px 0;
   border-radius: 50%;
