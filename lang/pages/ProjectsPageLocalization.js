@@ -62,4 +62,8 @@ export default defineMessages({
     id: "projects.name.condofyServer",
     defaultMessage: "The server for the Condofy app. It's a work in progress.",
   },
+  projectCondofyDemo: {
+    id: "projects.name.condofyDemo",
+    defaultMessage: "Live demo for Condofy, an apartments management tool.",
+  },
 });

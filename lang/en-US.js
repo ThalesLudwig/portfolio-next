@@ -93,6 +93,7 @@ export const EN_US = {
   "projects.name.coffegramServer": "The server for the Coffeegram app and web version, with NodeJS.",
   "projects.name.condofy": "The new project I'm working on. It's a work in progress.",
   "projects.name.condofyServer": "The server for the Condofy app. It's a work in progress.",
+  "projects.name.condofyDemo": "Live demo for Condofy, an apartments management tool.",
 
   "settings.theme": "Switch theme color",
   "settings.language": "Choose language",
