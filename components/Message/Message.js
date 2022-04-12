@@ -26,7 +26,7 @@ const renderIcon = ({ media }) => {
     case MEDIA.PLAYSTORE:
       return "social/playstore.jpeg";
     default:
-      return "social/star.png";
+      return "social/vercel.png";
   }
 };
 

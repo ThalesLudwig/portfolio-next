@@ -193,7 +193,7 @@ export default function Home() {
                 pills={["React", "Redux"]}
                 title="Condofy (Demo)"
                 url="https://condofy.vercel.app/"
-                image="social/star.png"
+                image="social/vercel.png"
               >
                 {formatMessage(localizationProjects.projectCondofyDemo)}
               </ProjectCard>
