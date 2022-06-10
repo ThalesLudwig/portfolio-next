@@ -44,7 +44,7 @@ export const PT_BR = {
   "chat.skills.about": "Sobre minhas habilidades... 🛠️",
 
   "about.hero":
-    "Engenheiro de software. UI/UX Designer. Máquina que converte energéticos em código limpo e escalável. Gamer hardcore.",
+    "Engenheiro de software. UI/UX Designer. Desenvolvedor Blockchain. Máquina que converte energéticos em código limpo e escalável. Gamer hardcore.",
   "career.hero": "Minha jornada profissional até este momento.",
   "contact.hero": "Você pode entrar em contato comigo de todas essas formas. Ou use o e-mail: thales.ludwig@gmail.com",
   "education.hero":
@@ -57,7 +57,7 @@ export const PT_BR = {
 
   "about.card.one": "🚩 Atualmente residindo no sul do Brasil.",
   "about.card.two": "🌎  Entusiasta do estilo de vida remoto.",
-  "about.card.three": "🎮  Amante de jogos!",
+  "about.card.three": "🔗  Trabalhando com Blockchain e Web3!",
 
   "about.news.happening": "Últimos acontecimentos",
   "about.news.one": "Começando um novo projeto pessoal com Angular.",

@@ -133,6 +133,7 @@ export default function Home() {
             <Skill label="Git" isAlt progress={80} />
             <Skill label="Jest" isAlt progress={80} />
             <Skill label="Docker" isAlt progress={70} />
+            <Skill label="Blockchain" progress={65} isAlt />
             <Skill label="Cypress" isAlt progress={30} />
           </SkillList>
         </SkillListWrapper>
@@ -155,22 +156,22 @@ export default function Home() {
           <EducationCard
             image="education/education_2.png"
             title={formatMessage(localizationEducation.courseUx)}
-            status="95%"
+            status="100%"
             subtitle={formatMessage(localizationEducation.degreeSpecialization)}
             school={formatMessage(localizationEducation.schoolTitleUniritter)}
             location={formatMessage(localizationEducation.country)}
             logo="education/uniritter.png"
-            icon="education/clock.svg"
+            icon="education/check.svg"
           />
           <EducationCard
             image="education/education_3.png"
             title={formatMessage(localizationEducation.courseMobile)}
-            status="95%"
+            status="100%"
             subtitle={formatMessage(localizationEducation.degreeSpecialization)}
             school={formatMessage(localizationEducation.schoolTitleUniritter)}
             location={formatMessage(localizationEducation.country)}
             logo="education/uniritter.png"
-            icon="education/clock.svg"
+            icon="education/check.svg"
           />
         </EducationRow>
       </EducationSection>

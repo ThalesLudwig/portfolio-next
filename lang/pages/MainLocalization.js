@@ -4,7 +4,7 @@ export default defineMessages({
   header: {
     id: "about.hero",
     defaultMessage:
-      "Full-stack software engineer. UI/UX Designer. A machine that converts energy drinks into clean and scalable code. Game Lover.",
+      "Full-stack software engineer. UI/UX Designer. Blockchain developer. A machine that converts energy drinks into clean and scalable code. Game Lover.",
   },
   hireMe: {
     id: "about.hire",
@@ -24,7 +24,7 @@ export default defineMessages({
   },
   cardThree: {
     id: "about.card.three",
-    defaultMessage: "🎮  Game lover!",
+    defaultMessage: "🔗  Working with Blockchain and Web3!",
   },
   happeningNow: {
     id: "about.news.happening",

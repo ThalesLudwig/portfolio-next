@@ -42,7 +42,7 @@ export const EN_US = {
   "chat.skills.about": "About my skills... 🛠️",
 
   "about.hero":
-    "Full-stack software engineer. UI/UX Designer. A machine that converts energy drinks into clean and scalable code. Game Lover.",
+    "Full-stack software engineer. UI/UX Designer. Blockchain developer. A machine that converts energy drinks into clean and scalable code. Game Lover.",
   "career.hero": "My professional journey until this point.",
   "contact.hero": "These are all the ways you can reach me. Or just use the e-mail: thales.ludwig@gmail.com",
   "education.hero": "These are my academic qualifications. I'm also constantly learning new stuff by myself!",
@@ -53,7 +53,7 @@ export const EN_US = {
 
   "about.card.one": "🚩 Currently located in the south of Brazil.",
   "about.card.two": "🌎  Enthusiast of remote work lifestyle.",
-  "about.card.three": "🎮  Game lover!",
+  "about.card.three": "🔗  Working with Blockchain and Web3!",
 
   "about.news.happening": "What’s happening now",
   "about.news.one": "Starting a new personal project with Angular.",
